@@ -4,23 +4,82 @@
 @source "../../../content/**/*";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
-  --font-serif: 'Instrument Serif', serif;
+  --font-sora: 'Sora', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
 :root {
   --ui-container: var(--container-4xl);
 
+  --img-light-bg: #FDF4E3;
+  --img-dark-text: #4D2D1A;
+  --img-accent-orange: #E85D3B;
+  --img-muted-blue: #6A7F99;
+  --img-card-bg: #FFFFFF;
 
-  ::selection {
-    color: #282a30;
-    background-color: #c8c8c8;
-  }
+  --ui-primary: var(--img-accent-orange);
+  --ui-primary-foreground: #FFFFFF;
+  --ui-secondary: var(--img-muted-blue);
+  --ui-secondary-foreground: #FFFFFF;
+  --ui-background: var(--img-light-bg);
+  --ui-foreground: var(--img-dark-text);
+  --ui-card: var(--img-card-bg);
+  --ui-card-foreground: var(--img-dark-text);
+  --ui-muted: #F5EFE1;
+  --ui-muted-foreground: var(--img-muted-blue);
+  --ui-border: #E4DACE;
+
+  --ui-text-dimmed: #9E7C60;
+  --ui-text-muted: var(--ui-muted-foreground);
+  --ui-text-toned: var(--img-dark-text);
+  --ui-text: var(--ui-foreground);
+  --ui-text-highlighted: var(--ui-primary);
+  --ui-text-inverted: var(--ui-primary-foreground);
+
+  --ui-bg: var(--ui-background);
+  --ui-bg-muted: var(--ui-muted);
+  --ui-bg-elevated: var(--img-card-bg);
+  --ui-bg-accented: #F9E7C4;
+  --ui-bg-inverted: var(--ui-foreground);
+
+  --ui-border-muted: var(--ui-border);
+  --ui-border-accented: #D1C2AD;
+  --ui-border-inverted: var(--ui-foreground);
 }
 
 .dark {
-  ::selection {
-    color: #ffffff;
-    background-color: #474747;
-  }
+  --img-dark-bg: #1A1828;
+  --img-light-text: #F0E68C;
+  --img-accent-orange: #E85D3B;
+  --img-headphone-blue: #3EC1D3;
+  --img-card-dark-bg: #2A2640;
+
+  --ui-primary: var(--img-accent-orange);
+  --ui-primary-foreground: #FFFFFF;
+  --ui-secondary: var(--img-headphone-blue);
+  --ui-secondary-foreground: var(--img-dark-bg);
+  --ui-background: var(--img-dark-bg);
+  --ui-foreground: var(--img-light-text);
+  --ui-card: var(--img-card-dark-bg);
+  --ui-card-foreground: var(--img-light-text);
+  --ui-muted: #2F2B4A;
+  --ui-muted-foreground: #9E95C7;
+  --ui-border: #3E385E;
+
+  --ui-text-dimmed: #A89ECF;
+  --ui-text-muted: var(--ui-muted-foreground);
+  --ui-text-toned: #F5F1DA;
+  --ui-text: var(--ui-foreground);
+  --ui-text-highlighted: var(--img-headphone-blue);
+  --ui-text-inverted: var(--img-dark-bg);
+
+  --ui-bg: var(--ui-background);
+  --ui-bg-muted: var(--ui-muted);
+  --ui-bg-elevated: var(--img-card-dark-bg);
+  --ui-bg-accented: #312550;
+  --ui-bg-inverted: var(--ui-foreground);
+
+  --ui-border-muted: var(--ui-border);
+  --ui-border-accented: var(--img-headphone-blue);
+  --ui-border-inverted: var(--ui-foreground);
 }

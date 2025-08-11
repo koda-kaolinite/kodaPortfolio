@@ -2,6 +2,7 @@
 import type { IndexCollectionItem } from '@nuxt/content'
 
 const { footer, global } = useAppConfig()
+const runtimeConfig = useRuntimeConfig()
 
 defineProps<{
   page: IndexCollectionItem
@@ -35,9 +36,9 @@ defineProps<{
       >
         <UColorModeAvatar
           class="size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-          :light="global.picture?.light!"
-          :dark="global.picture?.dark!"
-          :alt="global.picture?.alt!"
+          :light="runtimeConfig.public.pictureLight"
+          :dark="runtimeConfig.public.pictureDark"
+          :alt="runtimeConfig.public.pictureAlt"
         />
       </Motion>
     </template>
@@ -105,13 +106,14 @@ defineProps<{
           v-if="page.hero.links"
           class="flex items-center gap-2"
         >
-          <UButton v-bind="page.hero.links[0]" />
+          <!--          <UButton v-bind="page.hero.links[0]" /> -->
           <UButton
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
             class="gap-2"
-            :to="global.available ? global.meetingLink : ''"
+            :to="global.available ? runtimeConfig.public.meetingLink : ''"
             :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
+            target="_blank"
           >
             <template #leading>
               <span class="relative flex size-2">
