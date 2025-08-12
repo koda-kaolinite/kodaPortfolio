@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    '@nuxtjs/i18n'
   ],
 
   devtools: {
@@ -50,6 +51,26 @@ export default defineNuxtConfig({
       { name: 'Sora', provider: 'google', weights: ['400', '500', '600', '700', '800'] },
       { name: 'Inter', provider: 'google', weights: ['400', '500', '600', '700'] }
     ]
+  },
+  i18n: {
+    strategy: 'prefix',
+    defaultLocale: 'pt_BR',
+    langDir: 'locales',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en.json',
+        name: 'English'
+      },
+      {
+        code: 'pt_BR',
+        iso: 'pt_BR',
+        file: 'pt_BR.json',
+        name: 'Portugues'
+      }
+    ],
+    vueI18n: './i18n.config.ts'
   }
 
 })

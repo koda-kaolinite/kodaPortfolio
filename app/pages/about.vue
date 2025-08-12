@@ -1,7 +1,28 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('about', () => {
-  return queryCollection('about').first()
+import type { Collections } from '@nuxt/content'
+
+const { locale } = useI18n()
+
+const { data: page } = await useAsyncData('about_' + locale.value, async () => {
+  const collection = ('about_' + locale.value) as keyof Collections
+  const content = queryCollection(collection).first()
+
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('about_en').first()
+  }
+  return content
+}, {
+  watch: [locale]
 })
+
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true
+  })
+}
+
 if (!page.value) {
   throw createError({
     statusCode: 404,

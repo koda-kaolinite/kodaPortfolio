@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Collections } from '@nuxt/content'
+
 type Event = {
   title: string
   date: string
@@ -7,9 +9,28 @@ type Event = {
   category: 'Conference' | 'Live talk' | 'Podcast'
 }
 
-const { data: page } = await useAsyncData('speaking', () => {
-  return queryCollection('speaking').first()
+const { locale } = useI18n()
+
+const { data: page } = await useAsyncData('speaking_' + locale.value, async () => {
+  const collection = ('speaking_' + locale.value) as keyof Collections
+  const content = queryCollection(collection).first()
+
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('speaking_en').first()
+  }
+  return content
+}, {
+  watch: [locale]
 })
+
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true
+  })
+}
+
 if (!page.value) {
   throw createError({
     statusCode: 404,

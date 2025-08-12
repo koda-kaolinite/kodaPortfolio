@@ -24,3 +24,6 @@ logs
 
 # VSC
 .history
+
+#Assets
+public/assets/*

@@ -1,7 +1,21 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('projects-page', () => {
-  return queryCollection('pages').path('/projects').first()
+import type { Collections } from '@nuxt/content'
+
+const { locale } = useI18n()
+const { global } = useAppConfig()
+
+const { data: page } = await useAsyncData('projectsPage_' + locale.value, async () => {
+  const collection = ('projectsPage_' + locale.value) as keyof Collections
+  const content = queryCollection(collection).first()
+
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('projectsPage_en').first()
+  }
+  return content
+}, {
+  watch: [locale]
 })
+
 if (!page.value) {
   throw createError({
     statusCode: 404,
@@ -10,11 +24,25 @@ if (!page.value) {
   })
 }
 
-const { data: projects } = await useAsyncData('projects', () => {
-  return queryCollection('projects').all()
+const { data: projects } = await useAsyncData('projects_' + locale.value, async () => {
+  const collection = ('projects_' + locale.value) as keyof Collections
+  const content = queryCollection(collection).all()
+
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('projects_en').first()
+  }
+  return content
+}, {
+  watch: [locale]
 })
 
-const { global } = useAppConfig()
+if (!projects.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Projects not found',
+    fatal: false
+  })
+}
 
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,

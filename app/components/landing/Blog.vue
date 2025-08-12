@@ -1,15 +1,26 @@
 <script setup lang="ts">
-import type { IndexCollectionItem } from '@nuxt/content'
+import type { Collections, IndexEnCollectionItem, IndexPtBRCollectionItem } from '@nuxt/content'
+
+const { locale } = useI18n()
 
 defineProps<{
-  page: IndexCollectionItem
+  page: IndexEnCollectionItem | IndexPtBRCollectionItem
 }>()
 
-const { data: posts } = await useAsyncData('index-blogs', () =>
-  queryCollection('blog').order('date', 'DESC').limit(3).all()
-)
+const { data: posts } = await useAsyncData('blog_' + locale.value, async () => {
+  const collection = ('blog_' + locale.value) as keyof Collections
+  const content = queryCollection(collection).order('date', 'DESC').limit(3).all()
+
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('index_en').first()
+  }
+  return content
+}, {
+  watch: [locale]
+})
+
 if (!posts.value) {
-  throw createError({ statusCode: 404, statusMessage: 'blogs posts not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'blogs posts not found', fatal: false })
 }
 </script>
 

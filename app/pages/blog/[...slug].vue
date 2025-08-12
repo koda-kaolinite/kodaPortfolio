@@ -1,18 +1,46 @@
 <script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
+import type { PageCollections, Collections, ContentNavigationItem } from '@nuxt/content'
 import { findPageBreadcrumb, mapContentNavigation } from '#ui-pro/utils/content'
 
 const route = useRoute()
+const { locale } = useI18n()
 
-const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection('blog').path(route.path).first()
-)
-if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings('blog', route.path, {
+const { data: page } = await useAsyncData(route.path, async () => {
+  const collection = ('blog_' + locale.value) as keyof Collections
+  const content = queryCollection(collection).path(route.path).first()
+
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('index_en').first()
+  }
+  return content
+}, {
+  watch: [locale]
+})
+
+if (!page.value) throw createError(
+  { statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true
+  })
+
+// const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
+//   queryCollectionItemSurroundings('blog', route.path, {
+//     fields: ['description']
+//   })
+
+const { data: surround } = await useAsyncData(`${route.path}-surround`, async () => {
+  const collection = ('blog_' + locale.value) as keyof PageCollections
+  const content = queryCollectionItemSurroundings(collection, route.path, {
     fields: ['description']
   })
-)
+
+  if (!content && locale.value !== 'en') {
+    return await queryCollection('index_en').first()
+  }
+  return content
+}, {
+  watch: [locale]
+})
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const blogNavigation = computed(() => navigation.value.find(item => item.path === '/blog')?.children || [])
