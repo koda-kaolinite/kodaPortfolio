@@ -2,6 +2,7 @@
 import type { Collections } from '@nuxt/content'
 
 const { locale } = useI18n()
+const runtimeConfig = useRuntimeConfig()
 
 const { data: page } = await useAsyncData('about_' + locale.value, async () => {
   const collection = ('about_' + locale.value) as keyof Collections
@@ -56,9 +57,9 @@ useSeoMeta({
     >
       <UColorModeAvatar
         class="sm:rotate-4 size-36 rounded-lg ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-        :light="global.picture?.light!"
-        :dark="global.picture?.dark!"
-        :alt="global.picture?.alt!"
+        :light="runtimeConfig.public.pictureLight"
+        :dark="runtimeConfig.public.pictureDark"
+        :alt="runtimeConfig.public.pictureAlt"
       />
     </UPageHero>
     <UPageSection

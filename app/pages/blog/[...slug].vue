@@ -4,6 +4,7 @@ import { findPageBreadcrumb, mapContentNavigation } from '#ui-pro/utils/content'
 
 const route = useRoute()
 const { locale } = useI18n()
+const localePath = useLocalePath()
 
 const { data: page } = await useAsyncData(route.path, async () => {
   const collection = ('blog_' + locale.value) as keyof Collections
@@ -83,7 +84,7 @@ const formatDate = (dateString: string) => {
     <UContainer class="relative min-h-screen">
       <UPage v-if="page">
         <ULink
-          to="/blog"
+          :to="localePath('/blog')"
           class="text-sm flex items-center gap-1"
         >
           <UIcon name="lucide:chevron-left" />

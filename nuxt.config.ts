@@ -26,16 +26,7 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-11-01',
-
-  nitro: {
-    prerender: {
-      routes: [
-        '/'
-      ],
-      crawlLinks: true
-    }
-  },
+  compatibilityDate: '2025-08-12',
 
   eslint: {
     config: {
@@ -54,7 +45,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     strategy: 'prefix',
-    defaultLocale: 'pt_BR',
+    defaultLocale: 'pt_br',
     langDir: 'locales',
     locales: [
       {
@@ -64,9 +55,9 @@ export default defineNuxtConfig({
         name: 'English'
       },
       {
-        code: 'pt_BR',
-        iso: 'pt_BR',
-        file: 'pt_BR.json',
+        code: 'pt_br',
+        iso: 'pt_br',
+        file: 'pt_br.json',
         name: 'Portugues'
       }
     ],
