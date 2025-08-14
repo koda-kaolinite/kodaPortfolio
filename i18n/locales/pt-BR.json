@@ -21,9 +21,6 @@
   "blogComponent": {
     "readArticle": "Ler Artigo"
   },
-  "app": {
-    "titleSuffix": "Template de Portfólio Nuxt"
-  },
   "footer": {
     "copyright": "Direitos Autorais ©",
     "whatsappAriaLabel": "Koda no Whatsapp",

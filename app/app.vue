@@ -3,7 +3,7 @@ import type { PageCollections } from '@nuxt/content'
 
 const colorMode = useColorMode()
 
-const { locale, t } = useI18n()
+const { locale } = useI18n()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
 
@@ -19,13 +19,6 @@ useHead({
   htmlAttrs: {
     lang: locale.value
   }
-})
-
-useSeoMeta({
-  titleTemplate: `%s - ${t('app.titleSuffix')}`,
-  ogImage: 'https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=light',
-  twitterImage: 'https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=light',
-  twitterCard: 'summary_large_image'
 })
 const collection = ('blog_' + locale.value.replace('-', '')) as keyof PageCollections
 

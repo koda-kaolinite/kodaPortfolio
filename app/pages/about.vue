@@ -2,11 +2,11 @@
 import type { Collections } from '@nuxt/content'
 
 const { locale } = useI18n()
-const runtimeConfig = useRuntimeConfig()
+const { global } = useAppConfig()
 
 const { data: page } = await useAsyncData('about_' + locale.value.replace('-', ''), async () => {
   const collection = ('about_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).first()
+  const content = queryCollection(collection).limit(10).first()
 
   if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('about_en').first()
@@ -47,9 +47,9 @@ useSeoMeta({
     >
       <UColorModeAvatar
         class="sm:rotate-4 size-36 rounded-lg ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-        :light="runtimeConfig.public.pictureLight"
-        :dark="runtimeConfig.public.pictureDark"
-        :alt="runtimeConfig.public.pictureAlt"
+        :light="global.picture.light"
+        :dark="global.picture.dark"
+        :alt="global.picture.alt"
       />
     </UPageHero>
     <UPageSection

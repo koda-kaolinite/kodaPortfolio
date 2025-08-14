@@ -6,7 +6,7 @@ export default defineAppConfig({
     picture: {
       dark: 'https://kktportfolio.blob.core.windows.net/public/videos/Vdeo_Animado_Pronto-ezgif.com-optimize.gif',
       light: 'https://kktportfolio.blob.core.windows.net/public/videos/Vdeo_Animado_Pronto-ezgif.com-optimize.gif',
-      alt: 'A GIF of me in pixelart style'
+      alt: 'A GIF of Koda in pixelart style'
     }
   },
   uiPro: {

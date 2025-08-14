@@ -11,8 +11,16 @@ hero:
       to: https://github.com/koda-kaolinite/kodaPortfolio
       color: "neutral"
   images:
-    - src: https://picsum.photos/468/468?random=1
-      alt: Random Image 1
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat2.jpg
+      alt: "Gato em uma foto"
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.jpg
+      alt: "Gato em uma foto"
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.jpg
+      alt: "Gato em uma foto"
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.jpg
+      alt: "Gato em uma foto"
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat6.jpg
+      alt: "Gato em uma foto"
 about:
   title: "Sobre Mim"
   description: |
