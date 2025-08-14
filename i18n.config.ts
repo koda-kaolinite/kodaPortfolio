@@ -1,3 +1,4 @@
 export default defineI18nConfig(() => ({
-  legacy: false
+  legacy: false,
+  fallbackLocale: 'en'
 }))

@@ -1,0 +1,107 @@
+seo:
+  title: "Koda Turqui | Engenheiro de Software Criando Soluções Web"
+  description: "Portfólio de Koda Turqui, Engenheiro e Desenvolvedor de Software em São Paulo, especialista na criação de aplicações web de ponta a ponta."
+title: |
+  Olá, sou Koda Turqui!
+  Engenheiro de Software & Desenvolvedor Web.
+description: "Eu projeto e desenvolvo soluções web completas de ponta a ponta. Atualmente em São Paulo, transformo requisitos de negócio em sistemas funcionais, escaláveis e de fácil manutenção."
+hero:
+  links:
+    - label: "Use este template"
+      to: https://github.com/koda-kaolinite/kodaPortfolio
+      color: "neutral"
+  images:
+    - src: https://picsum.photos/468/468?random=1
+      alt: Random Image 1
+about:
+  title: "Sobre Mim"
+  description: |
+    Como Engenheiro de software e desenvolvedor full-stack a 4 anos e apoiado pelas minhas formações continuas, eu projeto e desenvolvo soluções web completas de ponta a ponta, transformando requisitos de negócio em sistemas funcionais, escaláveis e de fácil manutenção.
+
+    Aplico princípios de Arquitetura e Design para criar sistemas que não são apenas funcionais, mas também escaláveis, testáveis e de fácil manutenção. Acredito que um sistema bem arquitetado é a base para uma experiência de usuário excepcional, e atuo em todo o ciclo de vida para garantir essa sinergia.
+experience:
+  title: Últimas Experiências
+  items:
+    - position: "Eng. e Dev. Fullstack em"
+      date: "2022 - Presente"
+      company:
+        name: Turqui Studios
+        logo: "mdi:building"
+        url: "https://www.linkedin.com/company/turqui-solutions/"
+        color: "#FF8C00"
+    - position: "Dev. Backend e Suporte em"
+      date: "2025 - 2025"
+      company:
+        name: E-Gestão
+        logo: "tabler:hexagon-letter-e"
+        url: "https://www.linkedin.com/company/egestao/"
+        color: "#007BFF"
+    - position: "Man. de Hardware e Software"
+      date: "2021 - 2024"
+      company:
+        name: Freelancer
+        logo: "tabler:letter-f"
+        url: "https://www.linkedin.com/in/kodat/"
+        color: "#5E6AD2"
+    - position: "Automação e Eletrônica Industrial"
+      date: "2019 - 2021"
+      company:
+        name: Coplac
+        logo: "tabler:letter-c"
+        url: "https://www.linkedin.com/in/kodat/"
+        color: "#FF6363"
+testimonials:
+  - quote: "Trabalhei pouco com o Koda, mas posso dizer que é uma pessoa comprometida e muito empenhada no que faz, além de bastante conhecimento na área também se interessa muito em ensinar e compartilhar o que sabe. A sua comunicação e transparência também são características bem marcantes das interações realizadas."
+    author:
+      name: 'Henrique Pinto'
+      description: 'Desenvolvedor Fullstack em JSMX'
+      avatar:
+        src: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
+        srcset: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
+  - quote: "Um ótimo profissional e comunicativo. Uma pessoa convicta na suas ideias, o que nos força a pensar criticamente, mas é o primeiro a abraçar uma solução melhor quando ela surge de uma discussão em equipe. Sempre entrega resultados acima do esperado."
+    author:
+      name: 'Felipe Ortiz'
+      description: 'Estagiário no Itaú Unibanco'
+      avatar:
+        src: 'https://media.licdn.com/dms/image/v2/D4D03AQGJMKjoyrzWlQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727633753183?e=1758153600&v=beta&t=xCGKygbn6oNRmADG2UPsxWQV6faFYze99Mz4X2nKY30'
+        srcset: 'https://media.licdn.com/dms/image/v2/D4D03AQGJMKjoyrzWlQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727633753183?e=1758153600&v=beta&t=xCGKygbn6oNRmADG2UPsxWQV6faFYze99Mz4X2nKY30'
+blog:
+  title: "Últimos Posts"
+  description: "Alguns dos meus pensamentos recentes"
+faq:
+  title: Perguntas Frequentemente questionadas
+  description: Respostas a perguntas frequentes sobre meus processos e serviços.
+  categories:
+    - title: Serviços e Processos
+      questions:
+        - label: Quais serviços você oferece?
+          content: |
+            Minha especialidade é o desenvolvimento de software de ponta a ponta, com foco em sistemas e aplicações web. Meus serviços incluem o design de APIs, a construção de back-ends robustos e escaláveis (principalmente com Java/Spring e Nest.js), e o desenvolvimento de front-ends reativos. Atuo desde a concepção da arquitetura até o deploy.
+        - label: Como é o seu processo de desenvolvimento?
+          content: |
+            Meu processo é guiado por metodologias ágeis e focado na qualidade da entrega, não só considerando a técnica, mas sim os trade-offs de cada decisão. Ele geralmente envolve etapas como Análise de Requisitos, Arquitetura da Solução (seguindo princípios como DDD e Arquitetura Hexagonal), Desenvolvimento pensado a testes, Revisão de Código e Implantação Contínua (CI/CD). Adapto o processo para garantir a entrega de software funcional, testável e de fácil manutenção.
+        - label: Você trabalha com startups?
+          content: |
+            Sim, com certeza. Tenho grande interesse em trabalhar com startups para ajudar a definir a fundação técnica de seus produtos. Minha experiência me permite construir MVPs (Mínimo Produto Viável) robustos e projetar arquiteturas que podem escalar conforme o negócio cresce, adaptando-me ao ambiente de desenvolvimento acelerado.
+    - title: "Valores & Prazos"
+      questions:
+        - label: Quanto custa um projeto normalmente?
+          content: |
+            Os custos variam com base no escopo, complexidade, funcionalidades e cronograma. Para projetos de desenvolvimento de aplicações web completas, meus contratos geralmente começam a partir de R$15.000, com projetos médios variando entre R$ 20.000 e R$ 40.000. Para consultoria de arquitetura ou tarefas de desenvolvimento pontuais, minha diária é de R$ 500.
+        - label: Quais são suas condições de pagamento?
+          content: |
+            Geralmente, exijo um sinal de 40% para agendar o projeto e iniciar o trabalho, com os 60% restantes devidos após a conclusão e entrega bem-sucedida do projeto. Aceito pagamentos via transferência bancária e Pix.
+        - label: Quanto tempo leva um projeto típico?
+          content: |
+            Os prazos dependem muito do escopo e da complexidade técnica do projeto. Projetos menores, como um MVP, podem levar de 4 a 6 semanas, enquanto projetos maiores e mais envolvidos podem variar de 2 a 5 meses. Eu sempre forneço uma estimativa detalhada do cronograma após a fase inicial de análise de escopo.
+        - label: Você oferece contratos de manutenção ou suporte contínuo?
+          content: |
+            Sim, para clientes que necessitam de suporte técnico contínuo, evolução de produto ou manutenção de sistemas, ofereço opções de contratos mensais (retainer) adaptados às necessidades específicas. Vamos conversar se isso for algo que lhe interessa.
+    - title: "Sobre Mim"
+      questions:
+        - label: "O que te motiva mais no seu trabalho?"
+          content: |
+            Sou motivado pelo desafio de resolver problemas complexos com código limpo e arquiteturas bem definidas. É incrivelmente gratificante construir um sistema robusto que não apenas funciona, mas que também é escalável, testável e de fácil manutenção. A elegância na resolução de um desafio técnico é o que realmente me impulsiona, pois sei que um sistema bem arquitetado se traduz em um produto final confiável, rápido e que gera resultados reais para o cliente.
+        - label: "Quais são seus hobbies fora do trabalho?"
+          content: |
+            Quando não estou programando, gosto de explorar os bairros de São Paulo, experimentar novas cafeterias e fazer trilhas nos parques próximos. Também sou um entusiasta de fotografia e contribuo ativamente para projetos open-source no meu tempo livre.

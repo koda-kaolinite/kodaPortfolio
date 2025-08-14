@@ -4,11 +4,11 @@ import type { Collections } from '@nuxt/content'
 const { locale } = useI18n()
 const { global } = useAppConfig()
 
-const { data: page } = await useAsyncData('projectsPage_' + locale.value, async () => {
-  const collection = ('projectsPage_' + locale.value) as keyof Collections
+const { data: page } = await useAsyncData('projectsPage_' + locale.value.replace('-', ''), async () => {
+  const collection = ('projectsPage_' + locale.value.replace('-', '')) as keyof Collections
   const content = queryCollection(collection).first()
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('projectsPage_en').first()
   }
   return content
@@ -24,11 +24,11 @@ if (!page.value) {
   })
 }
 
-const { data: projects } = await useAsyncData('projects_' + locale.value, async () => {
-  const collection = ('projects_' + locale.value) as keyof Collections
+const { data: projects } = await useAsyncData('projects_' + locale.value.replace('-', ''), async () => {
+  const collection = ('projects_' + locale.value.replace('-', '')) as keyof Collections
   const content = queryCollection(collection).all()
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('projects_en').first()
   }
   return content
@@ -111,22 +111,23 @@ useSeoMeta({
               {{ new Date(project.date).getFullYear() }}
             </span>
           </template>
-          <template #footer>
-            <ULink
-              :to="project.url"
-              class="text-sm text-primary flex items-center"
-            >
-              View Project
-              <UIcon
-                name="i-lucide-arrow-right"
-                class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-              />
-            </ULink>
-          </template>
+          <!--          <template #footer> -->
+          <!--            <ULink -->
+          <!--              :to="project.url" -->
+          <!--              class="text-sm text-primary flex items-center" -->
+          <!--            > -->
+          <!--              View Project -->
+          <!--              <UIcon -->
+          <!--                name="i-lucide-arrow-right" -->
+          <!--                class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100" -->
+          <!--              /> -->
+          <!--            </ULink> -->
+          <!--          </template> -->
           <img
             :src="project.image"
             :alt="project.title"
             class="object-cover w-full h-48 rounded-lg"
+            loading="lazy"
           >
         </UPageCard>
       </Motion>

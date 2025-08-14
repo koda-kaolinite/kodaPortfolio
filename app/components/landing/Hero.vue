@@ -2,7 +2,6 @@
 import type { IndexEnCollectionItem, IndexPtBRCollectionItem } from '@nuxt/content'
 
 const { footer, global } = useAppConfig()
-const runtimeConfig = useRuntimeConfig()
 
 defineProps<{
   page: IndexEnCollectionItem | IndexPtBRCollectionItem
@@ -36,9 +35,9 @@ defineProps<{
       >
         <UColorModeAvatar
           class="size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-          :light="runtimeConfig.public.pictureLight"
-          :dark="runtimeConfig.public.pictureDark"
-          :alt="runtimeConfig.public.pictureAlt"
+          :light="global.picture.light"
+          :dark="global.picture.dark"
+          :alt="global.picture.alt"
         />
       </Motion>
     </template>
@@ -59,6 +58,8 @@ defineProps<{
           duration: 0.6,
           delay: 0.1
         }"
+
+        class="whitespace-pre-line lg:text-4xl"
       >
         {{ page.title }}
       </Motion>
@@ -111,8 +112,8 @@ defineProps<{
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
             class="gap-2"
-            :to="global.available ? runtimeConfig.public.meetingLink : ''"
-            :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
+            :to="global.available ? global.meetingLink : ''"
+            :label="global.available ? $t('hero.availableForProjects') : $t('hero.notAvailable')"
             target="_blank"
           >
             <template #leading>

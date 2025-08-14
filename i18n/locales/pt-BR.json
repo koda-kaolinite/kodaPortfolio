@@ -1,0 +1,41 @@
+{
+  "blog": {
+    "backLink": "Blog",
+    "minReadSuffix": "MIN DE LEITURA",
+    "copyLink": "Copiar link",
+    "copySuccess": "Link do artigo copiado"
+  },
+  "navbar": {
+    "home": "Início",
+    "projects": "Projetos",
+    "blog": "Blog",
+    "about": "Sobre"
+  },
+  "hero": {
+    "availableForProjects": "Disponível para novos projetos",
+    "notAvailable": "Não disponível no momento"
+  },
+  "languageChanger": {
+    "ariaLabel": "Mudar idioma"
+  },
+  "blogComponent": {
+    "readArticle": "Ler Artigo"
+  },
+  "app": {
+    "titleSuffix": "Template de Portfólio Nuxt"
+  },
+  "footer": {
+    "copyright": "Direitos Autorais ©",
+    "whatsappAriaLabel": "Koda no Whatsapp",
+    "linkedinAriaLabel": "Koda no LinkedIn",
+    "githubAriaLabel": "Koda no GitHub"
+  },
+  "colorModeButton": {
+    "ariaLabelPrefix": "Mudar para o modo",
+    "ariaLabelSuffix": ""
+  },
+  "error": {
+    "pageNotFound": "Página não encontrada",
+    "pageNotFoundDescription": "Lamentamos, mas esta página não pôde ser encontrada."
+  }
+}

@@ -4,11 +4,11 @@ import type { Collections } from '@nuxt/content'
 const { locale } = useI18n()
 const runtimeConfig = useRuntimeConfig()
 
-const { data: page } = await useAsyncData('about_' + locale.value, async () => {
-  const collection = ('about_' + locale.value) as keyof Collections
+const { data: page } = await useAsyncData('about_' + locale.value.replace('-', ''), async () => {
+  const collection = ('about_' + locale.value.replace('-', '')) as keyof Collections
   const content = queryCollection(collection).first()
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('about_en').first()
   }
   return content
@@ -23,16 +23,6 @@ if (!page.value) {
     fatal: true
   })
 }
-
-if (!page.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: 'Page not found',
-    fatal: true
-  })
-}
-
-const { global } = useAppConfig()
 
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,
@@ -70,6 +60,7 @@ useSeoMeta({
       <MDC
         :value="page.content"
         unwrap="p"
+        style="div {white-space: pre-wrap;}"
       />
       <div class="flex flex-row justify-center items-center py-10 space-x-[-2rem]">
         <PolaroidItem

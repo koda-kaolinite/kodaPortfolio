@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
+import { useI18n } from '#imports'
 
 defineProps({
   error: {
@@ -8,15 +9,17 @@ defineProps({
   }
 })
 
+const { locale, t } = useI18n()
+
 useHead({
   htmlAttrs: {
-    lang: 'en'
+    lang: locale.value
   }
 })
 
 useSeoMeta({
-  title: 'Page not found',
-  description: 'We are sorry but this page could not be found.'
+  title: t('error.pageNotFound'),
+  description: t('error.pageNotFoundDescription')
 })
 
 const [{ data: navigation }, { data: files }] = await Promise.all([

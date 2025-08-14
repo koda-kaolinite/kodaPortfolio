@@ -11,11 +11,11 @@ type Event = {
 
 const { locale } = useI18n()
 
-const { data: page } = await useAsyncData('speaking_' + locale.value, async () => {
-  const collection = ('speaking_' + locale.value) as keyof Collections
+const { data: page } = await useAsyncData('speaking_' + locale.value.replace('-', ''), async () => {
+  const collection = ('speaking_' + locale.value.replace('-', '')) as keyof Collections
   const content = queryCollection(collection).first()
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('speaking_en').first()
   }
   return content

@@ -7,10 +7,10 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 
 const { data: page } = await useAsyncData(route.path, async () => {
-  const collection = ('blog_' + locale.value) as keyof Collections
+  const collection = ('blog_' + locale.value.replace('-', '')) as keyof Collections
   const content = queryCollection(collection).path(route.path).first()
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('index_en').first()
   }
   return content
@@ -24,18 +24,13 @@ if (!page.value) throw createError(
     fatal: true
   })
 
-// const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-//   queryCollectionItemSurroundings('blog', route.path, {
-//     fields: ['description']
-//   })
-
 const { data: surround } = await useAsyncData(`${route.path}-surround`, async () => {
-  const collection = ('blog_' + locale.value) as keyof PageCollections
+  const collection = ('blog_' + locale.value.replace('-', '')) as keyof PageCollections
   const content = queryCollectionItemSurroundings(collection, route.path, {
-    fields: ['description']
+    fields: ['title', 'description']
   })
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('index_en').first()
   }
   return content
@@ -71,7 +66,7 @@ useSeoMeta({
 const articleLink = computed(() => `${window?.location}`)
 
 const formatDate = (dateString: string) => {
-  return new Date(dateString).toLocaleDateString('en-US', {
+  return new Date(dateString).toLocaleDateString(locale.value, {
     year: 'numeric',
     month: 'short',
     day: 'numeric'
@@ -88,7 +83,7 @@ const formatDate = (dateString: string) => {
           class="text-sm flex items-center gap-1"
         >
           <UIcon name="lucide:chevron-left" />
-          Blog
+          {{ $t('blog.backLink') }}
         </ULink>
         <div class="flex flex-col gap-3 mt-8">
           <div class="flex text-xs text-muted items-center justify-center gap-2">
@@ -99,7 +94,7 @@ const formatDate = (dateString: string) => {
               -
             </span>
             <span v-if="page.minRead">
-              {{ page.minRead }} MIN READ
+              {{ page.minRead }} {{ $t('blog.minReadSuffix') }}
             </span>
           </div>
           <NuxtImg
@@ -134,8 +129,8 @@ const formatDate = (dateString: string) => {
               size="sm"
               variant="link"
               color="neutral"
-              label="Copy link"
-              @click="copyToClipboard(articleLink, 'Article link copied to clipboard')"
+              :label="$t('blog.copyLink')"
+              @click="copyToClipboard(articleLink, $t('blog.copySuccess'))"
             />
           </div>
           <UContentSurround :surround />

@@ -1,0 +1,6 @@
+title: "CLI Application for Task Automation"
+description: "I developed a command-line interface (CLI) application to automate programmatic operations. The tool was designed with a focus on componentization and modular architecture, drastically simplifying maintenance and the addition of new functionalities. The result was a significant gain in productivity and a reduction in task complexity for the team."
+image: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cli_Foto.png
+url: "#"
+tags: ["CLI", "Backend", "Automation", "Go", "F#"]
+date: "2026"

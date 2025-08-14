@@ -1,7 +1,13 @@
 export default defineAppConfig({
   global: {
-    email: 'ui-pro@nuxt.com',
-    available: true
+    email: 'kaolinite.work@proton.me',
+    available: true,
+    meetingLink: 'https://cal.com/koda-turqui/15min',
+    picture: {
+      dark: 'https://kktportfolio.blob.core.windows.net/public/videos/Vdeo_Animado_Pronto-ezgif.com-optimize.gif',
+      light: 'https://kktportfolio.blob.core.windows.net/public/videos/Vdeo_Animado_Pronto-ezgif.com-optimize.gif',
+      alt: 'A GIF of me in pixelart style'
+    }
   },
   uiPro: {
     pageHero: {
@@ -11,30 +17,5 @@ export default defineAppConfig({
         description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted'
       }
     }
-  },
-  footer: {
-    credits: `Copyright © ${new Date().getFullYear()}`,
-    colorMode: false,
-    links: [{
-      'icon': 'i-simple-icons-nuxtdotjs',
-      'to': 'https://nuxt.com',
-      'target': '_blank',
-      'aria-label': 'Nuxt Website'
-    }, {
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://discord.com/invite/ps2h6QT',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on Discord'
-    }, {
-      'icon': 'i-simple-icons-x',
-      'to': 'https://x.com/nuxt_js',
-      'target': '_blank',
-      'aria-label': 'Nuxt on X'
-    }, {
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub'
-    }]
   }
 })

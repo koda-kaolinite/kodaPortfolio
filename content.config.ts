@@ -72,29 +72,29 @@ export default defineContentConfig({
   collections: {
     // --- Index ---
     index_en: defineCollection({ type: 'page', source: { include: 'en/index.yml' }, schema: indexSchema }),
-    index_pt_br: defineCollection({ type: 'page', source: { include: 'pt_br/index.yml' }, schema: indexSchema }),
+    index_ptBR: defineCollection({ type: 'page', source: { include: 'pt-BR/index.yml' }, schema: indexSchema }),
 
     // --- Projects ---
     projects_en: defineCollection({ type: 'data', source: { include: 'en/projects/*.yml' }, schema: projectsSchema }),
-    projects_pt_br: defineCollection({ type: 'data', source: { include: 'pt_br/projects/*.yml' }, schema: projectsSchema }),
+    projects_ptBR: defineCollection({ type: 'data', source: { include: 'pt-BR/projects/*.yml' }, schema: projectsSchema }),
 
     // --- Blog ---
     blog_en: defineCollection({ type: 'page', source: { include: 'en/blog/*.md' }, schema: blogSchema }),
-    blog_pt_br: defineCollection({ type: 'page', source: { include: 'pt_br/blog/*.md' }, schema: blogSchema }),
+    blog_ptBR: defineCollection({ type: 'page', source: { include: 'pt-BR/blog/*.md' }, schema: blogSchema }),
 
     // --- Speaking ---
     speaking_en: defineCollection({ type: 'page', source: { include: 'en/speaking.yml' }, schema: speakingSchema }),
-    speaking_pt_br: defineCollection({ type: 'page', source: { include: 'pt_br/speaking.yml' }, schema: speakingSchema }),
+    speaking_ptBR: defineCollection({ type: 'page', source: { include: 'pt-BR/speaking.yml' }, schema: speakingSchema }),
 
     // --- About ---
     about_en: defineCollection({ type: 'page', source: { include: 'en/about.yml' }, schema: aboutSchema }),
-    about_pt_br: defineCollection({ type: 'page', source: { include: 'pt_br/about.yml' }, schema: aboutSchema }),
+    about_ptBR: defineCollection({ type: 'page', source: { include: 'pt-BR/about.yml' }, schema: aboutSchema }),
 
     // --- PÁGINAS DE LISTAGEM
     projectsPage_en: defineCollection({ type: 'page', source: { include: 'en/projects.yml' }, schema: pagesSchema }),
-    projectsPage_pt_br: defineCollection({ type: 'page', source: { include: 'pt_br/projects.yml' }, schema: pagesSchema }),
+    projectsPage_ptBR: defineCollection({ type: 'page', source: { include: 'pt-BR/projects.yml' }, schema: pagesSchema }),
 
     blogPage_en: defineCollection({ type: 'page', source: { include: 'en/blog.yml' }, schema: pagesSchema }),
-    blogPage_pt_br: defineCollection({ type: 'page', source: { include: 'pt_br/blog.yml' }, schema: pagesSchema })
+    blogPage_ptBR: defineCollection({ type: 'page', source: { include: 'pt-BR/blog.yml' }, schema: pagesSchema })
   }
 })

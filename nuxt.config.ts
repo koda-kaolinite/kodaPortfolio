@@ -17,12 +17,17 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  runtimeConfig: {
-    public: {
-      pictureDark: process.env.NUXT_PUBLIC_PICTURE_DARK,
-      pictureLight: process.env.NUXT_PUBLIC_PICTURE_LIGHT,
-      pictureAlt: process.env.NUXT_PUBLIC_PICTURE_ALT,
-      meetingLink: process.env.NUXT_PUBLIC_MEETING_LINK
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-light',
+          langs: [
+            'json',
+            'java'
+          ]
+        }
+      }
     }
   },
 
@@ -45,20 +50,22 @@ export default defineNuxtConfig({
   },
   i18n: {
     strategy: 'prefix',
-    defaultLocale: 'pt_br',
+    defaultLocale: 'pt-BR',
     langDir: 'locales',
     locales: [
       {
         code: 'en',
         iso: 'en-US',
         file: 'en.json',
-        name: 'English'
+        name: 'English',
+        icon: 'i-flag-gb-4x3'
       },
       {
-        code: 'pt_br',
-        iso: 'pt_br',
-        file: 'pt_br.json',
-        name: 'Portugues'
+        code: 'pt-BR',
+        iso: 'pt-BR',
+        file: 'pt-BR.json',
+        name: 'Português',
+        icon: 'i-flag-br-4x3'
       }
     ],
     vueI18n: './i18n.config.ts'

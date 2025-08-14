@@ -1,0 +1,37 @@
+title: "Sobre Mim"
+description: "Saiba mais sobre minha jornada em tecnologia, minha paixão por criar soluções para pessoas e como colaboro em equipe para transformar ideias em realidade."
+content: |
+  Olá, eu sou **Koda Turqui**, um **Engenheiro de Software** e **Desenvolvedor Fullstack** localizado aqui em São Paulo. Nos últimos anos, estive imerso no universo de desenvolvimento de software, com foco na construção de sistemas que não são apenas funcionais, mas genuinamente robustos, escaláveis e de fácil manutenção.
+  ::br
+  ::br
+  Meu caminho começou com uma base sólida em hardware, o que me deu uma profunda apreciação pela lógica e resolução de problemas. Essa paixão evoluiu para o software, me levando a buscar graduações em **Análise e Desenvolvimento de Sistemas** e **Engenharia de Software**, além de programas intensivos como o **Oracle Next Education**, **Santander Academy** e **Serasa Transforme-se**. Foi aí que descobri minha vocação para trabalhar com pessoas e código. Desde então, tenho aprimorado minhas habilidades em ambas as áreas, acreditando que os melhores produtos digitais nascem de um equilíbrio entre a compreensão da engenharia e da experiência.
+
+  ### Minha Forma de Trabalhar
+  Acredito firmemente que software é uma disciplina coletiva: **são pessoas, trabalhando com pessoas, para servir outras pessoas**. Meu papel em um projeto vai além de escrever código; é sobre ouvir, comunicar e construir consensos. Busco criar um ambiente onde as ideias de todos são valorizadas e onde a colaboração flui de forma natural, pois as melhores soluções nascem da inteligência coletiva.
+  ::br
+  ::br
+  Meu conhecimento técnico é um instrumento para traduzir visões em realidade de forma clara e sustentável. Priorizo criar sistemas que sejam fáceis para outros desenvolvedores entenderem e darem continuidade, pois um bom trabalho em equipe sobrevive ao tempo.
+
+  ### O que me Motiva
+  O que realmente me inspira é o "momento mágico" em que uma pessoa utiliza uma ferramenta que ajudei a construir e sente que sua vida ficou um pouco mais simples. É ver o esforço colaborativo de uma equipe se transformar em um sorriso, um problema resolvido ou um objetivo alcançado por alguém na outra ponta. Essa conexão e realização pessoal é a maior recompensa do meu trabalho.
+
+  ### Além do Código
+  Fora do computador, eu gosto de relaxar cuidando das minhas plantas e dos meus bichos. Também adoro fazer trabalhos manuais, como tricô, crochê e cozinhar.
+  ::br
+  ::br
+  Obrigado pela visita. Sinta-se livre para ver meus [projetos](./projects) ou [trocar uma ideia](/#contato).
+images:
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature3.jpg
+    alt: "Achei lindo os contrastes"
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat2.jpg
+    alt: "Ela tava comendo as plantas"
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature2.jpg
+    alt: "Tava passeando no parque de manhã"
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.jpg
+    alt: "Todo bonitinho rei do mundo"
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.jpg
+    alt: "Tinha acabado de acordar"
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature1.jpg
+    alt: "A arvore tem uns galhos tão bonito"
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.jpg
+    alt: "Tomando solzinho"

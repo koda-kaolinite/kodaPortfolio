@@ -3,11 +3,11 @@ import type { Collections } from '@nuxt/content'
 
 const { locale } = useI18n()
 
-const { data: page } = await useAsyncData('blogPage_' + locale.value, async () => {
-  const collection = ('blogPage_' + locale.value) as keyof Collections
+const { data: page } = await useAsyncData('blogPage_' + locale.value.replace('-', ''), async () => {
+  const collection = ('blogPage_' + locale.value.replace('-', '')) as keyof Collections
   const content = queryCollection(collection).first()
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('blogPage_en').first()
   }
   return content
@@ -23,11 +23,11 @@ if (!page.value) {
   })
 }
 
-const { data: posts } = await useAsyncData('blog_' + locale.value, async () => {
-  const collection = ('blog_' + locale.value) as keyof Collections
-  const content = queryCollection(collection).order('date', 'DESC').limit(3).all()
+const { data: posts } = await useAsyncData('blog_' + locale.value.replace('-', ''), async () => {
+  const collection = ('blog_' + locale.value.replace('-', '')) as keyof Collections
+  const content = queryCollection(collection).order('date', 'DESC').all()
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('index_en').first()
   }
   return content

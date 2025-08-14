@@ -7,11 +7,11 @@ defineProps<{
   page: IndexEnCollectionItem | IndexPtBRCollectionItem
 }>()
 
-const { data: posts } = await useAsyncData('blog_' + locale.value, async () => {
-  const collection = ('blog_' + locale.value) as keyof Collections
+const { data: posts } = await useAsyncData('blog_' + locale.value.replace('-', ''), async () => {
+  const collection = ('blog_' + locale.value.replace('-', '')) as keyof Collections
   const content = queryCollection(collection).order('date', 'DESC').limit(3).all()
 
-  if (!content && locale.value !== 'en') {
+  if (!content && locale.value.replace('-', '') !== 'en') {
     return await queryCollection('index_en').first()
   }
   return content
@@ -56,7 +56,7 @@ if (!posts.value) {
             size="xs"
             variant="link"
             class="px-0 gap-0"
-            label="Read Article"
+            :label="$t('blogComponent.readArticle')"
           >
             <template #trailing>
               <UIcon

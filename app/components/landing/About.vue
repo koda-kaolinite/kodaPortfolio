@@ -15,6 +15,7 @@ defineProps<{
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
       description: 'text-left mt-3 text-sm sm:text-md lg:text-sm text-muted'
     }"
+    class="whitespace-pre-line"
   />
 </template>
 
