@@ -13,8 +13,6 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.57",
-    "@iconify-json/simple-icons": "^1.2.43",
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "^1.10.0",
     "@nuxt/ui-pro": "^3.2.0",
@@ -23,9 +21,14 @@
     "better-sqlite3": "^12.2.0",
     "motion-v": "^1.5.0",
     "nuxt": "^4.0.0",
-    "nuxt-og-image": "^5.1.9"
+    "nuxt-og-image": "^5.1.9",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@iconify-json/flag": "^1.2.9",
+    "@iconify-json/lucide": "^1.2.57",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.43",
     "@nuxt/eslint": "^1.5.2",
     "eslint": "^9.31.0",
     "typescript": "^5.8.3",
@@ -38,11 +41,13 @@
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
       "better-sqlite3",
-      "sharp"
+      "sharp",
+      "sqlite3"
     ],
     "ignoredBuiltDependencies": [
       "@parcel/watcher",
       "esbuild",
+      "sqlite3",
       "vue-demi"
     ]
   },

@@ -3,12 +3,12 @@ import type { Collections } from '@nuxt/content'
 
 const { locale } = useI18n()
 
-const { data: page } = await useAsyncData('blogPage_' + locale.value.replace('-', ''), async () => {
-  const collection = ('blogPage_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).first()
+const { data: page } = await useAsyncData('blog_page_' + locale.value.replace('-', ''), async () => {
+  const collection = ('blog_page_' + locale.value.replace('-', '')) as keyof Collections
+  const content = queryCollection(collection).all()
 
   if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('blogPage_en').first()
+    return await queryCollection('blog_page_en').first()
   }
   return content
 }, {

@@ -27,3 +27,6 @@ logs
 
 #Assets
 public/assets/*
+
+# AWS Amplify
+.amplify-hosting

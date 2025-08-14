@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n'
   ],
 
+  ssr: false,
+
   devtools: {
     enabled: true
   },
@@ -21,7 +23,10 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
-          theme: 'github-light',
+          theme: {
+            default: 'one-light',
+            dark: 'github-dark'
+          },
           langs: [
             'json',
             'java'
@@ -32,6 +37,12 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-08-12',
+
+  nitro: {
+    prerender: {
+      crawlLinks: true
+    }
+  },
 
   eslint: {
     config: {
@@ -50,7 +61,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     strategy: 'prefix',
-    defaultLocale: 'pt-BR',
+    defaultLocale: 'pt-br',
     langDir: 'locales',
     locales: [
       {
@@ -61,9 +72,9 @@ export default defineNuxtConfig({
         icon: 'i-flag-gb-4x3'
       },
       {
-        code: 'pt-BR',
+        code: 'pt-br',
         iso: 'pt-BR',
-        file: 'pt-BR.json',
+        file: 'pt-br.json',
         name: 'Português',
         icon: 'i-flag-br-4x3'
       }

@@ -6,7 +6,7 @@ const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const router = useRouter()
 
-const nextLanguage = () => (locale.value === 'en' ? 'pt-BR' : 'en')
+const nextLanguage = () => (locale.value === 'en' ? 'pt-br' : 'en')
 
 const buttonIcon = computed(() => {
   const nextLangCode = nextLanguage()

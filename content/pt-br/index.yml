@@ -59,13 +59,6 @@ experience:
         url: "https://www.linkedin.com/in/kodat/"
         color: "#FF6363"
 testimonials:
-  - quote: "Trabalhei pouco com o Koda, mas posso dizer que é uma pessoa comprometida e muito empenhada no que faz, além de bastante conhecimento na área também se interessa muito em ensinar e compartilhar o que sabe. A sua comunicação e transparência também são características bem marcantes das interações realizadas."
-    author:
-      name: 'Henrique Pinto'
-      description: 'Desenvolvedor Fullstack em JSMX'
-      avatar:
-        src: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
-        srcset: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
   - quote: "Um ótimo profissional e comunicativo. Uma pessoa convicta na suas ideias, o que nos força a pensar criticamente, mas é o primeiro a abraçar uma solução melhor quando ela surge de uma discussão em equipe. Sempre entrega resultados acima do esperado."
     author:
       name: 'Felipe Ortiz'
@@ -73,6 +66,13 @@ testimonials:
       avatar:
         src: 'https://media.licdn.com/dms/image/v2/D4D03AQGJMKjoyrzWlQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727633753183?e=1758153600&v=beta&t=xCGKygbn6oNRmADG2UPsxWQV6faFYze99Mz4X2nKY30'
         srcset: 'https://media.licdn.com/dms/image/v2/D4D03AQGJMKjoyrzWlQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727633753183?e=1758153600&v=beta&t=xCGKygbn6oNRmADG2UPsxWQV6faFYze99Mz4X2nKY30'
+  - quote: "Trabalhei pouco com o Koda, mas posso dizer que é uma pessoa comprometida e muito empenhada no que faz, além de bastante conhecimento na área também se interessa muito em ensinar e compartilhar o que sabe. A sua comunicação e transparência também são características bem marcantes das interações realizadas."
+    author:
+      name: 'Henrique Pinto'
+      description: 'Desenvolvedor Fullstack em JSMX'
+      avatar:
+        src: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
+        srcset: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
 blog:
   title: "Últimos Posts"
   description: "Alguns dos meus pensamentos recentes"

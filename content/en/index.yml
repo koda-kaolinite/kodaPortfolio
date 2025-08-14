@@ -1,5 +1,5 @@
 seo:
-  title: "Koda Turqui - Software Engineer"
+  title: "Koda Turqui | Software Engineer"
   description: "Welcome to my portfolio! I'm Koda, a Software Engineer and Developer based in São Paulo. I specialize in creating end-to-end software and web applications."
 title: |
   Hi, I'm Koda Turqui
@@ -59,13 +59,6 @@ experience:
         url: "https://www.linkedin.com/in/kodat/"
         color: "#FF6363"
 testimonials:
-  - quote: "I worked little with Koda, but I can say that he is a committed person and very dedicated to what he does, besides having a lot of knowledge in the area, he is also very interested in teaching and sharing what he knows. His communication and transparency are also very striking characteristics of the interactions carried out."
-    author:
-      name: 'Henrique Pinto'
-      description: 'Fullstack Developer at JSMX'
-      avatar:
-        src: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
-        srcset: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
   - quote: "A great professional and communicative. A person convinced of his ideas, which forces us to think critically, but he is the first to embrace a better solution when it arises from a team discussion. Always delivers results above expectations."
     author:
       name: 'Felipe Ortiz'
@@ -73,13 +66,13 @@ testimonials:
       avatar:
         src: 'https://media.licdn.com/dms/image/v2/D4D03AQGJMKjoyrzWlQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727633753183?e=1758153600&v=beta&t=xCGKygbn6oNRmADG2UPsxWQV6faFYze99Mz4X2nKY30'
         srcset: 'https://media.licdn.com/dms/image/v2/D4D03AQGJMKjoyrzWlQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727633753183?e=1758153600&v=beta&t=xCGKygbn6oNRmADG2UPsxWQV6faFYze99Mz4X2nKY30'
-  - quote: "Emma stands out in her ability to translate complex sustainability data into intuitive interfaces. Her work on EcoTrack wasn't just visually stunning—it fundamentally changed how our users interact with environmental information. She approaches each problem with both creativity and analytical rigor, which is exactly what we needed."
+  - quote: "I worked little with Koda, but I can say that he is a committed person and very dedicated to what he does, besides having a lot of knowledge in the area, he is also very interested in teaching and sharing what he knows. His communication and transparency are also very striking characteristics of the interactions carried out."
     author:
-      name: 'Dr. Aisha Johnson'
-      description: 'Chief Innovation Officer at GreenTech Solutions'
+      name: 'Henrique Pinto'
+      description: 'Fullstack Developer at JSMX'
       avatar:
-        src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+        src: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
+        srcset: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
 blog:
   title: "Latest Posts"
   description: "Some of my recent thoughts"
