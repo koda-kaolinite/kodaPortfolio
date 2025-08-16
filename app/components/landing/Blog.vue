@@ -8,10 +8,10 @@ defineProps<{
 }>()
 
 const { data: posts } = await useAsyncData('landing_blog_posts_' + locale.value, async () => {
-  let posts = await queryCollection('blog').where('path', '=', `/${locale.value}`).order('date', 'DESC').limit(3).all()
+  let posts = await queryCollection('blog').where('path', 'LIKE', `/${locale.value}/blog%`).order('date', 'DESC').limit(3).all()
 
   if (posts.length === 0 && locale.value !== 'en') {
-    posts = await queryCollection('blog').where('path', '=', `/en`).order('date', 'DESC').limit(3).all()
+    posts = await queryCollection('blog').where('path', 'LIKE', `/en/blog%`).order('date', 'DESC').limit(3).all()
   }
 
   return posts

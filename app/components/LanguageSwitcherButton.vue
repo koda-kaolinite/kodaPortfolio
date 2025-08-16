@@ -9,8 +9,7 @@ const router = useRouter()
 const nextLanguage = () => (locale.value === 'en' ? 'pt-br' : 'en')
 
 const buttonIcon = computed(() => {
-  const nextLangCode = nextLanguage()
-  const targetLocale = locales.value.find(l => l.code === nextLangCode)
+  const targetLocale = locales.value.find(l => l.code === locale.value)
   return targetLocale?.icon as string || 'i-lucide-languages'
 })
 

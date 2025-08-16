@@ -6,10 +6,6 @@ title: |
   Engenheiro de Software & Desenvolvedor Web.
 description: "Eu projeto e desenvolvo soluções web completas de ponta a ponta. Atualmente em São Paulo, transformo requisitos de negócio em sistemas funcionais, escaláveis e de fácil manutenção."
 hero:
-  links:
-    - label: "Use este template"
-      to: https://github.com/koda-kaolinite/kodaPortfolio
-      color: "neutral"
   images:
     - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat2.jpg
       alt: "Gato em uma foto"
@@ -30,14 +26,14 @@ about:
 experience:
   title: Últimas Experiências
   items:
-    - position: "Eng. e Dev. Fullstack em"
+    - position: "Eng. Fullstack"
       date: "2022 - Presente"
       company:
         name: Turqui Studios
         logo: "mdi:building"
         url: "https://www.linkedin.com/company/turqui-solutions/"
         color: "#FF8C00"
-    - position: "Dev. Backend e Suporte em"
+    - position: "Dev. backend e Suporte"
       date: "2025 - 2025"
       company:
         name: E-Gestão
@@ -47,11 +43,11 @@ experience:
     - position: "Man. de Hardware e Software"
       date: "2021 - 2024"
       company:
-        name: Freelancer
-        logo: "tabler:letter-f"
+        name: MEI
+        logo: "tabler:letter-m"
         url: "https://www.linkedin.com/in/kodat/"
         color: "#5E6AD2"
-    - position: "Automação e Eletrônica Industrial"
+    - position: "Man. e Eletrônica Industrial"
       date: "2019 - 2021"
       company:
         name: Coplac

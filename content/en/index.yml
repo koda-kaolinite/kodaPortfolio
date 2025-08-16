@@ -6,10 +6,6 @@ title: |
   Software Engineer & Web Developer.
 description: "I design and develop complete end-to-end web solutions. Currently in São Paulo, I transform business requirements into functional, scalable, and easily maintainable systems."
 hero:
-  links:
-    - label: "Use this template"
-      to: https://github.com/koda-kaolinite/kodaPortfolio
-      color: "neutral"
   images:
     - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat2.jpg
       alt: "Cat in a picture"
@@ -30,28 +26,28 @@ about:
 experience:
   title: Latest Experiences
   items:
-    - position: "Fullstack Eng. and Dev. at"
+    - position: "Fullstack Eng. at"
       date: "2022 - Present"
       company:
         name: Turqui Studios
         logo: "mdi:building"
         url: "https://www.linkedin.com/company/turqui-solutions/"
         color: "#FF8C00"
-    - position: "Backend Dev. and Support at"
+    - position: "Back-end developer at"
       date: "2025 - 2025"
       company:
         name: E-Gestão
         logo: "tabler:hexagon-letter-e"
         url: "https://www.linkedin.com/company/egestao/"
         color: "#007BFF"
-    - position: "Hardware and Software Maintenance"
+    - position: "Hardware and Software Maint."
       date: "2021 - 2024"
       company:
-        name: Freelancer
-        logo: "tabler:letter-f"
+        name: MEI
+        logo: "tabler:letterm"
         url: "https://www.linkedin.com/in/kodat/"
         color: "#5E6AD2"
-    - position: "Industrial Automation and Electronics"
+    - position: "Ind. Maint. and Electronics"
       date: "2019 - 2021"
       company:
         name: Coplac
