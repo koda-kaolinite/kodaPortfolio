@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "ci": "pnpm install && pnpm lint && pnpm typecheck"
   },
   "dependencies": {
     "@nuxt/content": "^3.6.3",

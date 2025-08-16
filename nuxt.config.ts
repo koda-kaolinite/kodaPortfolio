@@ -11,8 +11,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n'
   ],
 
-  ssr: false,
-
   devtools: {
     enabled: true
   },

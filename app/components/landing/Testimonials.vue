@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { IndexEnCollectionItem, IndexPtBRCollectionItem } from '@nuxt/content'
+import type { IndexCollectionItem } from '@nuxt/content'
 
 defineProps<{
-  page: IndexEnCollectionItem | IndexPtBRCollectionItem
+  page: IndexCollectionItem
 }>()
 </script>
 
@@ -13,7 +13,7 @@ defineProps<{
     }"
   >
     <UCarousel
-      v-slot="{ item }"
+      v-slot="{ item }: { item: IndexCollectionItem['testimonials'][number] }"
       :items="page.testimonials"
       :autoplay="{ delay: 4000 }"
       loop

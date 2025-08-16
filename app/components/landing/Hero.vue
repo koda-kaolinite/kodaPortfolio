@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { IndexEnCollectionItem, IndexPtBRCollectionItem } from '@nuxt/content'
+import type { IndexCollectionItem } from '@nuxt/content'
 
 const { footer, global } = useAppConfig()
 
 defineProps<{
-  page: IndexEnCollectionItem | IndexPtBRCollectionItem
+  page: IndexCollectionItem
 }>()
 </script>
 
@@ -35,9 +35,9 @@ defineProps<{
       >
         <UColorModeAvatar
           class="size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-          :light="global.picture.light"
-          :dark="global.picture.dark"
-          :alt="global.picture.alt"
+          :light="global.picture?.light!"
+          :dark="global.picture?.dark!"
+          :alt="global.picture?.alt!"
         />
       </Motion>
     </template>
@@ -112,8 +112,8 @@ defineProps<{
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
             class="gap-2"
-            :to="global.available ? global.meetingLink : ''"
-            :label="global.available ? $t('hero.availableForProjects') : $t('hero.notAvailable')"
+            :to="global.available ? (global.meetingLink || '') : ''"
+            :label="global.available ? ($t('hero.availableForProjects') || '') : ($t('hero.notAvailable') || '')"
             target="_blank"
           >
             <template #leading>

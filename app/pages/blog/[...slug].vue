@@ -1,40 +1,26 @@
 <script setup lang="ts">
-import type { PageCollections, Collections, ContentNavigationItem } from '@nuxt/content'
+import type { ContentNavigationItem } from '@nuxt/content'
 import { findPageBreadcrumb, mapContentNavigation } from '#ui-pro/utils/content'
 
 const route = useRoute()
 const { locale } = useI18n()
 const localePath = useLocalePath()
 
-const { data: page } = await useAsyncData(route.path, async () => {
-  const collection = ('blog_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).path(route.path).first()
-
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('index_en').first()
-  }
-  return content
-}, {
-  watch: [locale]
-})
+const { data: page } = await useAsyncData(route.path, () =>
+  queryCollection('blog').where('path', '=', `/${route.path}`).first()
+)
 
 if (!page.value) throw createError(
   { statusCode: 404,
-    statusMessage: 'Page not found',
+    statusMessage: 'Blog content expanded not found',
     fatal: true
   })
 
-const { data: surround } = await useAsyncData(`${route.path}-surround`, async () => {
-  const collection = ('blog_' + locale.value.replace('-', '')) as keyof PageCollections
-  const content = queryCollectionItemSurroundings(collection, route.path, {
-    fields: ['title', 'description']
-  })
-
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('index_en').first()
-  }
-  return content
-}, {
+const { data: surround } = await useAsyncData(`${route.path}-surround`, async () =>
+  await queryCollectionItemSurroundings('blog', route.path, {
+    fields: ['description']
+  }),
+{
   watch: [locale]
 })
 

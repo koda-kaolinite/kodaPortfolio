@@ -1,12 +1,20 @@
 <script setup lang="ts">
-import type { IndexEnCollectionItem, IndexPtBrCollectionItem } from '@nuxt/content'
+import type { IndexCollectionItem } from '@nuxt/content'
+
+interface FAQCategory {
+  title: string
+  questions: Array<{
+    label: string
+    content: string
+  }>
+}
 
 const props = defineProps<{
-  page: IndexEnCollectionItem | IndexPtBrCollectionItem
+  page: IndexCollectionItem
 }>()
 
 const items = computed(() => {
-  return props.page.faq?.categories.map((faq) => {
+  return props.page.faq?.categories.map((faq: FAQCategory) => {
     return {
       label: faq.title,
       key: faq.title.toLowerCase(),

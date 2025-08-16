@@ -1,26 +1,30 @@
 <script setup lang="ts">
-import type { Collections, IndexEnCollectionItem, IndexPtBRCollectionItem } from '@nuxt/content'
+import type { IndexCollectionItem } from '@nuxt/content'
 
 const { locale } = useI18n()
 
 defineProps<{
-  page: IndexEnCollectionItem | IndexPtBRCollectionItem
+  page: IndexCollectionItem
 }>()
 
-const { data: posts } = await useAsyncData('blog_' + locale.value.replace('-', ''), async () => {
-  const collection = ('blog_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).order('date', 'DESC').limit(3).all()
+const { data: posts } = await useAsyncData('landing_blog_posts_' + locale.value, async () => {
+  let posts = await queryCollection('blog').where('path', '=', `/${locale.value}`).order('date', 'DESC').limit(3).all()
 
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('index_en').first()
+  if (posts.length === 0 && locale.value !== 'en') {
+    posts = await queryCollection('blog').where('path', '=', `/en`).order('date', 'DESC').limit(3).all()
   }
-  return content
+
+  return posts
 }, {
   watch: [locale]
 })
 
 if (!posts.value) {
-  throw createError({ statusCode: 404, statusMessage: 'blogs posts not found', fatal: false })
+  throw createError(
+    { statusCode: 404,
+      statusMessage: 'blogs posts not found',
+      fatal: false
+    })
 }
 </script>
 

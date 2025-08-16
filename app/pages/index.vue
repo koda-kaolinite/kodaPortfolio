@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import type { Collections } from '@nuxt/content'
-
 const { locale } = useI18n()
 
-const { data: page } = await useAsyncData('index_' + locale.value.replace('-', ''), async () => {
-  const collection = ('index_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).first()
+const { data: page } = await useAsyncData('index', async () => {
+  let content = await queryCollection('index').where('path', '=', `/${locale.value}`).first()
 
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('index_en').first()
+  if (!content) {
+    content = await queryCollection('index').where('path', '=', '/en').first()
   }
+
   return content
 }, {
   watch: [locale]
@@ -18,7 +16,7 @@ const { data: page } = await useAsyncData('index_' + locale.value.replace('-', '
 if (!page.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Page not found',
+    statusMessage: 'Landing page not found',
     fatal: true
   })
 }

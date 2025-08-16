@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import type { Collections } from '@nuxt/content'
-
 const { locale } = useI18n()
 
-const { data: page } = await useAsyncData('blog_page_' + locale.value.replace('-', ''), async () => {
-  const collection = ('blog_page_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).all()
+const { data: page } = await useAsyncData('blog-page' + locale.value, async () => {
+  let content = await queryCollection('pages').where('path', '=', `/${locale.value}/blog`).first()
 
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('blog_page_en').first()
+  if (!content) {
+    content = await queryCollection('pages').where('path', '=', '/en/blog').first()
   }
+
   return content
 }, {
   watch: [locale]
@@ -18,19 +16,19 @@ const { data: page } = await useAsyncData('blog_page_' + locale.value.replace('-
 if (!page.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Page not found',
+    statusMessage: 'Blog page not found',
     fatal: true
   })
 }
 
-const { data: posts } = await useAsyncData('blog_' + locale.value.replace('-', ''), async () => {
-  const collection = ('blog_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).order('date', 'DESC').all()
+const { data: posts } = await useAsyncData('blogs-posts', async () => {
+  let posts = await queryCollection('blog').where('stem', 'LIKE', `${locale.value}/blog%`).all()
 
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('index_en').first()
+  if (posts.length === 0 && locale.value !== 'en') {
+    posts = await queryCollection('blog').where('stem', 'LIKE', 'en/projects%').all()
   }
-  return content
+
+  return posts
 }, {
   watch: [locale]
 })
@@ -38,7 +36,7 @@ const { data: posts } = await useAsyncData('blog_' + locale.value.replace('-', '
 if (!posts.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'blogs posts not found',
+    statusMessage: 'Blog posts not found',
     fatal: true
   })
 }

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { PageCollections } from '@nuxt/content'
-
 const colorMode = useColorMode()
 
 const { locale } = useI18n()
@@ -20,25 +18,31 @@ useHead({
     lang: locale.value
   }
 })
-const collection = ('blog_' + locale.value.replace('-', '')) as keyof PageCollections
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
   useAsyncData('navigation', () => {
     return Promise.all([
-      queryCollectionNavigation(collection)
+      queryCollectionNavigation('blog')
     ])
   }, {
     transform: data => data.flat()
   }),
   useLazyAsyncData('search', () => {
     return Promise.all([
-      queryCollectionSearchSections(collection)
+      queryCollectionSearchSections('blog')
     ])
   }, {
     server: false,
     transform: data => data.flat()
   })
 ])
+
+useSeoMeta({
+  titleTemplate: '%s - Koda Portfolio',
+  ogImage: 'https://kktportfolio.blob.core.windows.net/public/portfolio/images/portfolio-landpage.png',
+  twitterImage: 'https://kktportfolio.blob.core.windows.net/public/portfolio/images/portfolio-landpage.png',
+  twitterCard: 'summary_large_image'
+})
 </script>
 
 <template>

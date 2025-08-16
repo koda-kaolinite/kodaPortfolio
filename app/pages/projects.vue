@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import type { Collections } from '@nuxt/content'
-
 const { locale } = useI18n()
 const { global } = useAppConfig()
 
-const { data: page } = await useAsyncData('projects_page_' + locale.value.replace('-', ''), async () => {
-  const collection = ('projects_page_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).first()
+const { data: page } = await useAsyncData('project-page' + locale.value, async () => {
+  let content = await queryCollection('pages').where('path', '=', `/${locale.value}/projects`).first()
 
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('projects_page_en').first()
+  if (!content) {
+    content = await queryCollection('pages').where('path', '=', '/en/projects').first()
   }
+
   return content
 }, {
   watch: [locale]
@@ -19,19 +17,19 @@ const { data: page } = await useAsyncData('projects_page_' + locale.value.replac
 if (!page.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Page not found',
+    statusMessage: 'Projects page not found',
     fatal: true
   })
 }
 
-const { data: projects } = await useAsyncData('projects_' + locale.value.replace('-', ''), async () => {
-  const collection = ('projects_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).all()
+const { data: projects } = await useAsyncData('projects', async () => {
+  let projects = await queryCollection('projects').where('stem', 'LIKE', `${locale.value}/projects%`).all()
 
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('projects_en').first()
+  if (projects.length === 0 && locale.value !== 'en') {
+    projects = await queryCollection('projects').where('stem', 'LIKE', `en/projects%`).all()
   }
-  return content
+
+  return projects
 }, {
   watch: [locale]
 })

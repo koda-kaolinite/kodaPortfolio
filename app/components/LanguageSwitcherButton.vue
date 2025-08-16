@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useI18n, useSwitchLocalePath, useRouter } from '#imports'
+import { useI18n, useRouter, useSwitchLocalePath } from '#imports'
 
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
@@ -11,7 +11,7 @@ const nextLanguage = () => (locale.value === 'en' ? 'pt-br' : 'en')
 const buttonIcon = computed(() => {
   const nextLangCode = nextLanguage()
   const targetLocale = locales.value.find(l => l.code === nextLangCode)
-  return targetLocale?.icon || 'i-lucide-languages'
+  return targetLocale?.icon as string || 'i-lucide-languages'
 })
 
 const changeLanguage = () => {

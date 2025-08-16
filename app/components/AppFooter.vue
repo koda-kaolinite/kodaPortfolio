@@ -7,21 +7,21 @@ const credits = computed(() => `${t('footer.copyright')} ${new Date().getFullYea
 
 const links = computed(() => [
   {
-    icon: 'basil:whatsapp-solid',
-    to: 'https://api.whatsapp.com/send?phone=5511945975898&text=Ol%C3%A1%20Koda!%20%F0%9F%98%81',
-    target: '_blank',
+    'icon': 'basil:whatsapp-solid',
+    'to': 'https://api.whatsapp.com/send?phone=5511945975898&text=Ol%C3%A1%20Koda!%20%F0%9F%98%81',
+    'target': '_blank',
     'aria-label': t('footer.whatsappAriaLabel')
   },
   {
-    icon: 'mdi:linkedin',
-    to: 'https://www.linkedin.com/in/kodat/',
-    target: '_blank',
+    'icon': 'mdi:linkedin',
+    'to': 'https://www.linkedin.com/in/kodat/',
+    'target': '_blank',
     'aria-label': t('footer.linkedinAriaLabel')
   },
   {
-    icon: 'i-simple-icons-github',
-    to: 'https://github.com/koda-kaolinite',
-    target: '_blank',
+    'icon': 'i-simple-icons-github',
+    'to': 'https://github.com/koda-kaolinite',
+    'target': '_blank',
     'aria-label': t('footer.githubAriaLabel')
   }
 ])

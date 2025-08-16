@@ -34,67 +34,115 @@ const createTestimonialSchema = () => z.object({
   author: createAuthorSchema()
 })
 
-const indexSchema = z.object({
-  hero: z.object({ links: z.array(createButtonSchema()), images: z.array(createImageSchema()) }),
-  about: createBaseSchema(),
-  experience: createBaseSchema().extend({ items: z.array(z.object({ date: z.date(), position: z.string(), company: z.object({ name: z.string(), url: z.string(), logo: z.string().editor({ input: 'icon' }), color: z.string() }) })) }),
-  testimonials: z.array(createTestimonialSchema()),
-  blog: createBaseSchema(),
-  faq: createBaseSchema().extend({ categories: z.array(z.object({ title: z.string().nonempty(), questions: z.array(z.object({ label: z.string().nonempty(), content: z.string().nonempty() })) })) })
-})
-const projectsSchema = z.object({
-  title: z.string().nonempty(),
-  description: z.string().nonempty(),
-  image: z.string().nonempty().editor({ input: 'media' }),
-  url: z.string().nonempty(),
-  tags: z.array(z.string()),
-  date: z.date()
-})
-const blogSchema = z.object({
-  minRead: z.number(),
-  date: z.date(),
-  image: z.string().nonempty().editor({ input: 'media' }),
-  author: createAuthorSchema()
-})
-const pagesSchema = z.object({
-  links: z.array(createButtonSchema())
-})
-const speakingSchema = z.object({
-  links: z.array(createButtonSchema()),
-  events: z.array(z.object({ category: z.enum(['Live talk', 'Podcast', 'Conference']), title: z.string(), date: z.date(), location: z.string(), url: z.string().optional() }))
-})
-const aboutSchema = z.object({
-  content: z.object({}),
-  images: z.array(createImageSchema())
-})
-
 export default defineContentConfig({
   collections: {
-    // --- Index ---
-    index_en: defineCollection({ type: 'page', source: { include: 'en/index.yml' }, schema: indexSchema }),
-    index_ptbr: defineCollection({ type: 'page', source: { include: 'pt-br/index.yml' }, schema: indexSchema }),
-
-    // --- Projects ---
-    projects_en: defineCollection({ type: 'data', source: { include: 'en/projects/*.yml' }, schema: projectsSchema }),
-    projects_ptbr: defineCollection({ type: 'data', source: { include: 'pt-br/projects/*.yml' }, schema: projectsSchema }),
-
-    // --- Blog ---
-    blog_en: defineCollection({ type: 'page', source: { include: 'en/blog/*.md' }, schema: blogSchema }),
-    blog_ptbr: defineCollection({ type: 'page', source: { include: 'pt-br/blog/*.md' }, schema: blogSchema }),
-
-    // --- Speaking ---
-    speaking_en: defineCollection({ type: 'page', source: { include: 'en/speaking.yml' }, schema: speakingSchema }),
-    speaking_ptbr: defineCollection({ type: 'page', source: { include: 'pt-br/speaking.yml' }, schema: speakingSchema }),
-
-    // --- About ---
-    about_en: defineCollection({ type: 'page', source: { include: 'en/about.yml' }, schema: aboutSchema }),
-    about_ptbr: defineCollection({ type: 'page', source: { include: 'pt-br/about.yml' }, schema: aboutSchema }),
-
-    // --- PÁGINAS DE LISTAGEM
-    projects_page_en: defineCollection({ type: 'page', source: { include: 'en/projects.yml' }, schema: pagesSchema }),
-    projects_page_ptbr: defineCollection({ type: 'page', source: { include: 'pt-br/projects.yml' }, schema: pagesSchema }),
-
-    blog_page_en: defineCollection({ type: 'page', source: { include: 'en/blog.yml' }, schema: pagesSchema }),
-    blog_page_ptbr: defineCollection({ type: 'page', source: { include: 'pt-br/blog.yml' }, schema: pagesSchema })
+    index: defineCollection({
+      type: 'page',
+      source: [
+        { include: 'en/index.yml' },
+        { include: 'pt-br/index.yml' }
+      ],
+      schema: z.object({
+        hero: z.object({
+          links: z.array(createButtonSchema()),
+          images: z.array(createImageSchema())
+        }),
+        about: createBaseSchema(),
+        experience: createBaseSchema().extend({
+          items: z.array(z.object({
+            date: z.date(),
+            position: z.string(),
+            company: z.object({
+              name: z.string(),
+              url: z.string(),
+              logo: z.string().editor({ input: 'icon' }),
+              color: z.string()
+            })
+          }))
+        }),
+        testimonials: z.array(createTestimonialSchema()),
+        blog: createBaseSchema(),
+        faq: createBaseSchema().extend({
+          categories: z.array(
+            z.object({
+              title: z.string().nonempty(),
+              questions: z.array(
+                z.object({
+                  label: z.string().nonempty(),
+                  content: z.string().nonempty()
+                })
+              )
+            }))
+        })
+      })
+    }),
+    projects: defineCollection({
+      type: 'data',
+      source: [
+        { include: 'en/projects/*.yml' },
+        { include: 'pt-br/projects/*.yml' }
+      ],
+      schema: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        image: z.string().nonempty().editor({ input: 'media' }),
+        url: z.string().nonempty(),
+        tags: z.array(z.string()),
+        date: z.date()
+      })
+    }),
+    blog: defineCollection({
+      type: 'page',
+      source: [
+        { include: 'en/blog/*.md' },
+        { include: 'pt-br/blog/*.md' }
+      ],
+      schema: z.object({
+        minRead: z.number(),
+        date: z.date(),
+        image: z.string().nonempty().editor({ input: 'media' }),
+        author: createAuthorSchema()
+      })
+    }),
+    pages: defineCollection({
+      type: 'page',
+      source: [
+        { include: 'en/projects.yml' },
+        { include: 'pt-br/projects.yml' },
+        { include: 'en/blog.yml' },
+        { include: 'pt-br/blog.yml' }
+      ],
+      schema: z.object({
+        links: z.array(createButtonSchema())
+      })
+    }),
+    speaking: defineCollection({
+      type: 'page',
+      source: [
+        { include: 'en/speaking.yml' },
+        { include: 'pt-br/speaking.yml' }
+      ],
+      schema: z.object({
+        links: z.array(createButtonSchema()),
+        events: z.array(z.object({
+          category: z.enum(['Live talk', 'Podcast', 'Conference']),
+          title: z.string(),
+          date: z.date(),
+          location: z.string(),
+          url: z.string().optional()
+        }))
+      })
+    }),
+    about: defineCollection({
+      type: 'page',
+      source: [
+        { include: 'en/about.yml' },
+        { include: 'pt-br/about.yml' }
+      ],
+      schema: z.object({
+        content: z.object({}),
+        images: z.array(createImageSchema())
+      })
+    })
   }
 })

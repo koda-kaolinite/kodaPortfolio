@@ -1,6 +1,13 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
-export const navLinks: NavigationMenuItem[] = [{
+// Tipo mais específico para seus links de navegação
+interface NavLink extends NavigationMenuItem {
+  label: string
+  to: string
+  icon: string
+}
+
+export const navLinks: NavLink[] = [{
   label: 'navbar.home',
   icon: 'i-lucide-home',
   to: '/'
@@ -12,12 +19,7 @@ export const navLinks: NavigationMenuItem[] = [{
   label: 'navbar.blog',
   icon: 'i-lucide-file-text',
   to: '/blog'
-},
-//   label: 'Speaking',
-//   icon: 'i-lucide-mic',
-//   to: '/speaking'
-// }
-{
+}, {
   label: 'navbar.about',
   icon: 'i-lucide-user',
   to: '/about'

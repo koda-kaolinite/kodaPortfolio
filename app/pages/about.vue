@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import type { Collections } from '@nuxt/content'
-
 const { locale } = useI18n()
 const { global } = useAppConfig()
 
-const { data: page } = await useAsyncData('about_' + locale.value.replace('-', ''), async () => {
-  const collection = ('about_' + locale.value.replace('-', '')) as keyof Collections
-  const content = queryCollection(collection).limit(10).first()
-
-  if (!content && locale.value.replace('-', '') !== 'en') {
-    return await queryCollection('about_en').first()
+const { data: page } = await useAsyncData('about_' + locale.value, async () => {
+  let content = await queryCollection('about').where('path', '=', `/${locale.value}/about`).first()
+  if (!content) {
+    content = await queryCollection('about').where('path', '=', '/en/about').first()
   }
   return content
 }, {
@@ -19,7 +15,7 @@ const { data: page } = await useAsyncData('about_' + locale.value.replace('-', '
 if (!page.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Page not found',
+    statusMessage: 'About page not found',
     fatal: true
   })
 }
@@ -47,9 +43,9 @@ useSeoMeta({
     >
       <UColorModeAvatar
         class="sm:rotate-4 size-36 rounded-lg ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-        :light="global.picture.light"
-        :dark="global.picture.dark"
-        :alt="global.picture.alt"
+        :light="global.picture?.light!"
+        :dark="global.picture?.dark!"
+        :alt="global.picture?.alt!"
       />
     </UPageHero>
     <UPageSection

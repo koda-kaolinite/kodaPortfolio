@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { IndexEnCollectionItem, IndexPtBRCollectionItem } from '@nuxt/content'
+import type { IndexCollectionItem } from '@nuxt/content'
 
 defineProps<{
-  page: IndexEnCollectionItem | IndexPtBRCollectionItem
+  page: IndexCollectionItem
 }>()
 </script>
 
