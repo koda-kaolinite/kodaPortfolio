@@ -2,29 +2,20 @@
 import { useI18n } from '#imports'
 
 const { t } = useI18n()
+const { footer } = useAppConfig()
 
 const credits = computed(() => `${t('footer.copyright')} ${new Date().getFullYear()}`)
 
-const links = computed(() => [
-  {
-    'icon': 'basil:whatsapp-solid',
-    'to': 'https://api.whatsapp.com/send?phone=5511945975898&text=Ol%C3%A1%20Koda!%20%F0%9F%98%81',
-    'target': '_blank',
-    'aria-label': t('footer.whatsappAriaLabel')
-  },
-  {
-    'icon': 'mdi:linkedin',
-    'to': 'https://www.linkedin.com/in/kodat/',
-    'target': '_blank',
-    'aria-label': t('footer.linkedinAriaLabel')
-  },
-  {
-    'icon': 'i-simple-icons-github',
-    'to': 'https://github.com/koda-kaolinite',
-    'target': '_blank',
-    'aria-label': t('footer.githubAriaLabel')
-  }
-])
+const links = computed(() =>
+  footer?.links!.map((link) => {
+    return {
+      icon: link.icon,
+      to: link.to,
+      target: link.target,
+      aria_label: t(link['aria-label'])
+    }
+  })
+)
 </script>
 
 <template>

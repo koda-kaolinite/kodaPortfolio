@@ -71,6 +71,7 @@ useSeoMeta({
             :label="page.links[0]?.label"
             :to="global.meetingLink"
             v-bind="page.links[0]"
+            target="_blank"
           />
           <UButton
             :to="`mailto:${global.email}`"

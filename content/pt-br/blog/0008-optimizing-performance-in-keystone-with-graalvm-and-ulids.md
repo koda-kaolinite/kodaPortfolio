@@ -1,5 +1,5 @@
 ---
-title: "Além do Código: Otimizando a Performance no Keystone com GraalVM e ULIDs"
+title: "Otimizando a Performance no Keystone com GraalVM e ULIDs"
 description: "Performance não é um acaso, é uma decisão de design. Exploramos duas otimizações cruciais no Keystone: a adoção da GraalVM para uma execução nativa e de baixo consumo, e a migração de UUIDs para ULIDs para resolver gargalos de performance no banco de dados."
 date: 2025-08-03
 image: https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1

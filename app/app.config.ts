@@ -17,5 +17,26 @@ export default defineAppConfig({
         description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted'
       }
     }
+  },
+  footer: {
+    col4orMode: false,
+    links: [{
+      'icon': 'basil:whatsapp-solid',
+      'to': 'https://api.whatsapp.com/send?phone=5511945975898&text=Ol%C3%A1%20Koda!%20%F0%9F%98%81',
+      'target': '_blank',
+      'aria-label': 'footer.whatsappAriaLabel'
+    },
+    {
+      'icon': 'mdi:linkedin',
+      'to': 'https://www.linkedin.com/in/kodat/',
+      'target': '_blank',
+      'aria-label': 'footer.linkedinAriaLabel'
+    },
+    {
+      'icon': 'i-simple-icons-github',
+      'to': 'https://github.com/koda-kaolinite',
+      'target': '_blank',
+      'aria-label': 'footer.githubAriaLabel'
+    }]
   }
 })

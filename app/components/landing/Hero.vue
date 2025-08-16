@@ -2,10 +2,22 @@
 import type { IndexCollectionItem } from '@nuxt/content'
 
 const { footer, global } = useAppConfig()
+const { t } = useI18n()
 
 defineProps<{
   page: IndexCollectionItem
 }>()
+
+const links = computed(() =>
+  footer?.links!.map((link) => {
+    return {
+      icon: link.icon,
+      to: link.to,
+      target: link.target,
+      aria_label: t(link['aria-label'])
+    }
+  })
+)
 </script>
 
 <template>
@@ -132,7 +144,7 @@ defineProps<{
 
       <div class="gap-x-4 inline-flex mt-4">
         <Motion
-          v-for="(link, index) of footer?.links"
+          v-for="(link, index) of links"
           :key="index"
 
           :initial="{
