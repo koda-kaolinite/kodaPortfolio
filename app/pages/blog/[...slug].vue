@@ -7,7 +7,7 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 
 const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection('blog').where('path', '=', `/${route.path}`).first()
+  queryCollection('blog').where('path', '=', route.path).order('date', 'DESC').first()
 )
 
 if (!page.value) throw createError(
