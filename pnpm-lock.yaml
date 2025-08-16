@@ -7,8 +7,6 @@ settings:
 overrides:
   unimport: 4.1.1
 
-pnpmfileChecksum: sha256-3gXJx7EBTAY3stWA4euXqQy8Ct9wsi9cEA3X+J/yFfU=
-
 importers:
 
   .:
