@@ -4,8 +4,6 @@ import { useI18n } from '#imports'
 const { t } = useI18n()
 const { footer } = useAppConfig()
 
-const credits = computed(() => `${t('footer.copyright')} ${new Date().getFullYear()}`)
-
 const links = computed(() =>
   footer?.links!.map((link) => {
     return {
@@ -24,7 +22,9 @@ const links = computed(() =>
     :ui="{ left: 'text-xs' }"
   >
     <template #left>
-      {{ credits }}
+      <ClientOnly>
+        {{ `${t('footer.copyright')} ${new Date().getFullYear()}` }}
+      </ClientOnly>
     </template>
 
     <template #right>
