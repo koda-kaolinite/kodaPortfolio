@@ -13,7 +13,7 @@ content: |
   My technical knowledge is an instrument to translate visions into reality in a clear and sustainable way. I prioritize creating systems that are easy for other developers to understand and maintain, because good teamwork endures over time.
 
   ### What Motivates Me
-  What truly inspires me is the "magic moment" when someone uses a tool I helped build and feels their life has become a little simpler. It's seeing the collaborative effort of a team transform into a smile, a problem solved, or a goal achieved by someone on the other end. This connection and personal fulfillment is the greatest reward of my work.
+  What truly inspires me is the moment when someone uses a tool I helped build and feels their life has become a little simpler. It's seeing the collaborative effort of a team transform into a smile, a problem solved, or a goal achieved by someone on the other end. This connection and personal fulfillment is the greatest reward of my work.
 
   ### Beyond the Code
   Outside of the computer, I like to relax by taking care of my plants and my pets. I also love doing manual work, such as knitting, crocheting, and cooking.
@@ -21,17 +21,9 @@ content: |
   ::br
   Thank you for visiting. Feel free to check out my [projects](./projects) or [get in touch](/#contact).
 images:
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature3.jpg
-    alt: "I found the contrasts beautiful"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat2.jpg
-    alt: "She was eating the plants"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature2.jpg
-    alt: "Was walking in the park in the morning"
   - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.jpg
     alt: "All cute, king of the world"
   - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.jpg
     alt: "Had just woken up"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature1.jpg
-    alt: "The tree has such beautiful branches"
   - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.jpg
     alt: "Sunbathing"

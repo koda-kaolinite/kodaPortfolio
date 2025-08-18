@@ -13,7 +13,7 @@ content: |
   Meu conhecimento técnico é um instrumento para traduzir visões em realidade de forma clara e sustentável. Priorizo criar sistemas que sejam fáceis para outros desenvolvedores entenderem e darem continuidade, pois um bom trabalho em equipe sobrevive ao tempo.
 
   ### O que me Motiva
-  O que realmente me inspira é o "momento mágico" em que uma pessoa utiliza uma ferramenta que ajudei a construir e sente que sua vida ficou um pouco mais simples. É ver o esforço colaborativo de uma equipe se transformar em um sorriso, um problema resolvido ou um objetivo alcançado por alguém na outra ponta. Essa conexão e realização pessoal é a maior recompensa do meu trabalho.
+  O que realmente me inspira é o momento em que uma pessoa utiliza uma ferramenta que ajudei a construir e sente que sua vida ficou um pouco mais simples. É ver o esforço colaborativo de uma equipe se transformar em um sorriso, um problema resolvido ou um objetivo alcançado por alguém na outra ponta. Essa conexão e realização pessoal é a maior recompensa do meu trabalho.
 
   ### Além do Código
   Fora do computador, eu gosto de relaxar cuidando das minhas plantas e dos meus bichos. Também adoro fazer trabalhos manuais, como tricô, crochê e cozinhar.
@@ -21,17 +21,9 @@ content: |
   ::br
   Obrigado pela visita. Sinta-se livre para ver meus [projetos](./projects) ou [trocar uma ideia](/#contato).
 images:
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature3.jpg
-    alt: "Achei lindo os contrastes"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat2.jpg
-    alt: "Ela tava comendo as plantas"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature2.jpg
-    alt: "Tava passeando no parque de manhã"
   - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.jpg
     alt: "Todo bonitinho rei do mundo"
   - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.jpg
     alt: "Tinha acabado de acordar"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/nature1.jpg
-    alt: "A arvore tem uns galhos tão bonito"
   - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.jpg
     alt: "Tomando solzinho"

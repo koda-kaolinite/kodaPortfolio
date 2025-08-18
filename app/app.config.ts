@@ -28,7 +28,7 @@ export default defineAppConfig({
     },
     {
       'icon': 'mdi:linkedin',
-      'to': 'https://www.linkedin.com/in/kodat/',
+      'to': 'https://www.linkedin.com/in/kodaturqui/',
       'target': '_blank',
       'aria-label': 'footer.linkedinAriaLabel'
     },
