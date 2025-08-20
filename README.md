@@ -1,28 +1,65 @@
-# Nuxt Portfolio Template
+# Koda's Portfolio
 
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com/pro)
-[![Deploy to NuxtHub](https://img.shields.io/badge/Deploy%20to-NuxtHub-00DC82?logo=nuxt&labelColor=020420)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/portfolio)
+<p align="center">
+  <a href="https://github.com/koda-kaolinite/kodaPortfolio/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/koda-kaolinite/kodaPortfolio/deploy.yml?style=for-the-badge" alt="CI">
+  </a>
 
-Use this template to create your own portfolio with [Nuxt UI Pro](https://ui.nuxt.com/pro).
+[//]: # (  <a href="https://github.com/koda-kaolinite/kodaPortfolio/blob/main/LICENSE">)
 
-- [Live demo](https://portfolio-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/getting-started/installation/pro/nuxt)
+[//]: # (    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">)
 
-<a href="https://portfolio-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=light">
-    <img alt="Nuxt Portfolio Template" src="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg">
-  </picture>
-</a>
+[//]: # (  </a>)
+  <img src="https://img.shields.io/badge/Nuxt-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white" alt="Nuxt">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+</p>
 
-## Quick Start
+This is my personal portfolio, built with Nuxt and Nuxt UI Pro. It showcases my projects, blog posts, and professional
+experience.
 
-```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/portfolio
+---
+
+## ✨ Features
+
+* **🤖 Automated CI/CD:** The project is configured with a CI/CD pipeline using GitHub Actions that automatically runs
+  tests and deploys the application.
+* **🌍 Full Internationalization (i18n):** The portfolio is built with internationalization in mind, supporting multiple
+  languages. Currently, English (`en`) and Portuguese (Brazil) (`pt-br`) are available.
+* **✍️ Custom & Original Content:** All the content, from blog posts to project descriptions, is original and written by
+  me.
+* **🎨 UI/UX Enhancements:** Several improvements were made to the original template to enhance the user experience,
+  including a new language switcher and theme color adjustments.
+* **⚙️ Centralized Configuration:** The project uses a centralized configuration file (`app.config.ts`) for easy
+  management of footer links and other global settings.
+
+---
+
+## 🛠️ Technical Stack
+
+| Technology                                | Description                                                                            |
+|-------------------------------------------|----------------------------------------------------------------------------------------|
+| [Nuxt](https://nuxt.com/)                 | The Intuitive Vue Framework                                                            |
+| [Nuxt UI Pro](https://ui.nuxt.com/pro)    | A professional UI library for Nuxt                                                     |
+| [Nuxt Content](https://content.nuxt.com/) | A Nuxt module that reads Markdown, YAML, CSV and JSON files to create a file-based CMS |
+| [Nuxt Image](https://image.nuxt.com/)     | A Nuxt module for optimizing images                                                    |
+| [i18n](https://i18n.nuxtjs.org/)          | A Nuxt module for internationalization                                                 |
+| [VueUse](https://vueuse.org/)             | A collection of essential Vue Composition Utilities                                    |
+| [Motion](https://motion.dev/)             | A library for creating animations                                                      |
+| [Tailwind CSS](https://tailwindcss.com/)  | A utility-first CSS framework                                                          |
+
+---
+
+## 🚀 Getting Started
+
+### CI
+
+Run the integration tests:
+
+```bash
+pnpm run ci
 ```
 
-## Setup
+### Setup
 
 Make sure to install the dependencies:
 
@@ -30,7 +67,7 @@ Make sure to install the dependencies:
 pnpm install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -38,22 +75,24 @@ Start the development server on `http://localhost:3000`:
 pnpm dev
 ```
 
-## Production
+### Production
 
-Build the application for production:
+Build the application for production (for static hosting):
 
 ```bash
-pnpm build
+pnpm generate --preset github_pages
 ```
 
 Locally preview production build:
 
 ```bash
-pnpm preview
+npx serve .output/public
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-## Renovate integration
+---
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+## 🙏 Acknowledgments
+
+This project was originally based on the [Nuxt UI Pro portfolio template](https://github.com/nuxt/ui-pro).
