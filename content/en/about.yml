@@ -21,9 +21,9 @@ content: |
   ::br
   Thank you for visiting. Feel free to check out my [projects](./projects) or [get in touch](/#contact).
 images:
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.jpg
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.webp
     alt: "All cute, king of the world"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.jpg
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.webp
     alt: "Had just woken up"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.jpg
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.webp
     alt: "Sunbathing"

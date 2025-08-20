@@ -7,7 +7,7 @@ minRead: 9
 author:
   name: Koda Turqui
   avatar:
-    src: https://kktportfolio.blob.core.windows.net/public/videos/Vdeo_Animado_Pronto-ezgif.com-optimize.gif
+    src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/Vdeo_Animado_Pronto-ezgif.webp
     alt: "Animated gif of Koda in pixelart"
 ---
 

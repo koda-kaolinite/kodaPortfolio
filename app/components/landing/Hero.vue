@@ -45,11 +45,13 @@ const links = computed(() =>
           delay: 0.1
         }"
       >
-        <UColorModeAvatar
-          class="size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-          :light="global.picture?.light!"
-          :dark="global.picture?.dark!"
-          :alt="global.picture?.alt!"
+        <video
+          class="scale-100 overflow-hidden object-cover items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated text-base hidden dark:block size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
+          :src="global.picture?.src!"
+          autoplay
+          loop
+          muted
+          playsinline
         />
       </Motion>
     </template>

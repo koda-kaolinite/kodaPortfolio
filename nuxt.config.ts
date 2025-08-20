@@ -39,6 +39,9 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true
+    },
+    routeRules: {
+      '/**': { headers: { 'Cache-Control': 'public, max-age=3600, s-maxage=3600, must-revalidate' } }
     }
   },
 

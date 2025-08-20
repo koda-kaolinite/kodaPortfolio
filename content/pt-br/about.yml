@@ -21,9 +21,9 @@ content: |
   ::br
   Obrigado pela visita. Sinta-se livre para ver meus [projetos](./projects) ou [trocar uma ideia](/#contato).
 images:
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.jpg
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.webp
     alt: "Todo bonitinho rei do mundo"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.jpg
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.webp
     alt: "Tinha acabado de acordar"
-  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.jpg
+  - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.webp
     alt: "Tomando solzinho"

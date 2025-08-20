@@ -4,8 +4,7 @@ export default defineAppConfig({
     available: true,
     meetingLink: 'https://cal.com/koda-turqui/15min',
     picture: {
-      dark: 'https://kktportfolio.blob.core.windows.net/public/videos/Vdeo_Animado_Pronto-ezgif.com-optimize.gif',
-      light: 'https://kktportfolio.blob.core.windows.net/public/videos/Vdeo_Animado_Pronto-ezgif.com-optimize.gif',
+      src: 'https://kktportfolio.blob.core.windows.net/public/videos/Vdeo_Animado_Pronto-ezgif.com.webm',
       alt: 'A GIF of Koda in pixelart style'
     }
   },

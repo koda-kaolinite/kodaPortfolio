@@ -8,15 +8,15 @@ title: |
 description: "Eu projeto e desenvolvo soluções web completas de ponta a ponta. Atualmente em São Paulo, transformo requisitos de negócio em sistemas funcionais, escaláveis e de fácil manutenção."
 hero:
   images:
-    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat2.jpg
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat2.webp
       alt: "Gato em uma foto"
-    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.jpg
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat4.webp
       alt: "Gato em uma foto"
-    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.jpg
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat5.webp
       alt: "Gato em uma foto"
-    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.jpg
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat7.webp
       alt: "Gato em uma foto"
-    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat6.jpg
+    - src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/cat6.webp
       alt: "Gato em uma foto"
 about:
   title: "Sobre Mim"
@@ -61,15 +61,15 @@ testimonials:
       name: 'Felipe Ortiz'
       description: 'Estagiário no Itaú Unibanco'
       avatar:
-        src: 'https://media.licdn.com/dms/image/v2/D4D03AQGJMKjoyrzWlQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727633753183?e=1758153600&v=beta&t=xCGKygbn6oNRmADG2UPsxWQV6faFYze99Mz4X2nKY30'
-        srcset: 'https://media.licdn.com/dms/image/v2/D4D03AQGJMKjoyrzWlQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727633753183?e=1758153600&v=beta&t=xCGKygbn6oNRmADG2UPsxWQV6faFYze99Mz4X2nKY30'
+        src: 'https://kktportfolio.blob.core.windows.net/public/portfolio/images/felipe-foto.webp'
+        srcset: 'https://kktportfolio.blob.core.windows.net/public/portfolio/images/felipe-foto.webp'
   - quote: "Trabalhei pouco com o Koda, mas posso dizer que é uma pessoa comprometida e muito empenhada no que faz, além de bastante conhecimento na área também se interessa muito em ensinar e compartilhar o que sabe. A sua comunicação e transparência também são características bem marcantes das interações realizadas."
     author:
       name: 'Henrique Pinto'
       description: 'Desenvolvedor Fullstack em JSMX'
       avatar:
-        src: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
-        srcset: 'https://media.licdn.com/dms/image/v2/D4E03AQEWQMnl0B3Mfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690609284224?e=1758153600&v=beta&t=2O4chxz2by8QJPsGuvhmYvfpXd2WkQlotPmMi18w6DM'
+        src: 'https://kktportfolio.blob.core.windows.net/public/portfolio/images/henrique-foto.webp'
+        srcset: 'https://kktportfolio.blob.core.windows.net/public/portfolio/images/henrique-foto.webp'
 blog:
   title: "Últimos Posts"
   description: "Alguns dos meus pensamentos recentes"
