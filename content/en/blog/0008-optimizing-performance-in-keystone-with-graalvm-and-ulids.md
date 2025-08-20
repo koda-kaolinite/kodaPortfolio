@@ -7,7 +7,7 @@ minRead: 11
 author:
   name: Koda Turqui
   avatar:
-    src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/Vdeo_Animado_Pronto-ezgif.webp
+    src: https://kktportfolio.blob.core.windows.net/public/portfolio/images/20250809_2318_Homem com Fones_remix_01k28w7xx5ehz85pss8pqtxek5-1.webp
     alt: "Animated gif of Koda in pixelart"
 ---
 
