@@ -22,10 +22,18 @@ if (!page.value) {
 }
 
 const { data: posts } = await useAsyncData(`blogs-posts-${locale.value}`, async () => {
-  let posts = await queryCollection('blog').where('stem', 'LIKE', `${locale.value}/blog%`).order('date', 'DESC').all()
+  let posts = await queryCollection('blog')
+    .where('stem', 'LIKE', `${locale.value}/blog%`)
+    .order('date', 'DESC')
+    .limit(3)
+    .all()
 
   if (posts.length === 0 && locale.value !== 'en') {
-    posts = await queryCollection('blog').where('stem', 'LIKE', 'en/blog%').order('date', 'DESC').all()
+    posts = await queryCollection('blog')
+      .where('stem', 'LIKE', 'en/blog%')
+      .order('date', 'DESC')
+      .limit(3)
+      .all()
   }
 
   return posts

@@ -1,12 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    '@nuxtjs/seo',
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui-pro',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-og-image',
     'motion-v/nuxt',
     '@nuxtjs/i18n'
   ],
@@ -16,6 +16,11 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+  site: {
+    url: 'https://koda-turqui.dev',
+    name: 'Koda Turqui Portfolio',
+    description: 'Welcome to my portfolio!'
+  },
 
   content: {
     build: {
@@ -27,10 +32,14 @@ export default defineNuxtConfig({
           },
           langs: [
             'json',
-            'java'
+            'java',
+            'groovy'
           ]
         }
       }
+    },
+    renderer: {
+      anchorLinks: false
     }
   },
 
@@ -60,6 +69,7 @@ export default defineNuxtConfig({
       { name: 'Inter', provider: 'google', weights: ['400', '500', '600', '700'] }
     ]
   },
+
   i18n: {
     strategy: 'prefix',
     defaultLocale: 'pt-br',

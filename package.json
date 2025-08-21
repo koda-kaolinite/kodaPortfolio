@@ -14,26 +14,21 @@
     "ci": "pnpm install && pnpm lint && pnpm typecheck"
   },
   "dependencies": {
+    "@nuxtjs/seo": "^3.1.0",
     "@nuxt/content": "^3.6.3",
-    "@nuxt/image": "^1.10.0",
-    "@nuxt/ui-pro": "^3.2.0",
-    "@nuxtjs/i18n": "^10.0.4",
-    "@vueuse/nuxt": "^13.5.0",
+    "@nuxt/image": "^1.11.0",
+    "@nuxt/ui-pro": "^3.3.2",
+    "@nuxtjs/i18n": "^10.0.6",
+    "@vueuse/nuxt": "^13.7.0",
     "better-sqlite3": "^12.2.0",
-    "motion-v": "^1.5.0",
-    "nuxt": "^4.0.0",
-    "nuxt-og-image": "^5.1.9",
-    "sqlite3": "^5.1.7"
+    "motion-v": "^1.7.0",
+    "nuxt": "^4.0.3"
   },
   "devDependencies": {
-    "@iconify-json/flag": "^1.2.9",
-    "@iconify-json/lucide": "^1.2.57",
-    "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.43",
-    "@nuxt/eslint": "^1.5.2",
-    "eslint": "^9.31.0",
-    "typescript": "^5.8.3",
-    "vue-tsc": "^3.0.1"
+    "@nuxt/eslint": "^1.9.0",
+    "eslint": "^9.33.0",
+    "typescript": "^5.9.2",
+    "vue-tsc": "^3.0.6"
   },
   "resolutions": {
     "unimport": "4.1.1"
@@ -43,7 +38,8 @@
       "@tailwindcss/oxide",
       "better-sqlite3",
       "sharp",
-      "sqlite3"
+      "sqlite3",
+      "unrs-resolver"
     ],
     "ignoredBuiltDependencies": [
       "@parcel/watcher",

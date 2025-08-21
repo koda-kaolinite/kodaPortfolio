@@ -31,6 +31,8 @@ experience.
   including a new language switcher and theme color adjustments.
 * **⚙️ Centralized Configuration:** The project uses a centralized configuration file (`app.config.ts`) for easy
   management of footer links and other global settings.
+* **🚀 Advanced SEO:** Integrated with the **[@nuxtjs/seo](https://nuxt.com/seo)** module, the project has advanced SEO features, including dynamic `robots.txt` generation, sitemaps, and rich meta tags, replacing the previous `nuxt-og-image` implementation.
+* **⚡ Performance Optimizations:** Several performance improvements have been implemented, such as **payload optimization** by fetching only necessary data in content queries and **lazy loading** for images to ensure a faster user experience.
 
 ---
 
@@ -41,6 +43,7 @@ experience.
 | [Nuxt](https://nuxt.com/)                 | The Intuitive Vue Framework                                                            |
 | [Nuxt UI Pro](https://ui.nuxt.com/pro)    | A professional UI library for Nuxt                                                     |
 | [Nuxt Content](https://content.nuxt.com/) | A Nuxt module that reads Markdown, YAML, CSV and JSON files to create a file-based CMS |
+| [Nuxt SEO](https://nuxt.com/seo)          | A Nuxt module for robust SEO features, including sitemaps and meta tags                |
 | [Nuxt Image](https://image.nuxt.com/)     | A Nuxt module for optimizing images                                                    |
 | [i18n](https://i18n.nuxtjs.org/)          | A Nuxt module for internationalization                                                 |
 | [VueUse](https://vueuse.org/)             | A collection of essential Vue Composition Utilities                                    |
