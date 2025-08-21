@@ -31,7 +31,7 @@ experience:
       date: "2022 - Presente"
       company:
         name: Turqui Studios
-        logo: "mdi:building"
+        logo: "tabler:building-skyscraper"
         url: "https://www.linkedin.com/company/turqui-solutions/"
         color: "#FF8C00"
     - position: "Dev. backend e Suporte"

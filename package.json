@@ -14,17 +14,19 @@
     "ci": "pnpm install && pnpm lint && pnpm typecheck"
   },
   "dependencies": {
-    "@nuxtjs/seo": "^3.1.0",
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "^1.11.0",
     "@nuxt/ui-pro": "^3.3.2",
     "@nuxtjs/i18n": "^10.0.6",
+    "@nuxtjs/seo": "^3.1.0",
     "@vueuse/nuxt": "^13.7.0",
     "better-sqlite3": "^12.2.0",
     "motion-v": "^1.7.0",
     "nuxt": "^4.0.3"
   },
   "devDependencies": {
+    "@iconify-json/flag": "^1.2.9",
+    "@iconify-json/tabler": "^1.2.22",
     "@nuxt/eslint": "^1.9.0",
     "eslint": "^9.33.0",
     "typescript": "^5.9.2",

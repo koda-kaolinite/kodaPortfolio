@@ -31,7 +31,7 @@ experience:
       date: "2022 - Present"
       company:
         name: Turqui Studios
-        logo: "mdi:building"
+        logo: "tabler:building-skyscraper"
         url: "https://www.linkedin.com/company/turqui-solutions/"
         color: "#FF8C00"
     - position: "Back-end developer at"
@@ -45,7 +45,7 @@ experience:
       date: "2021 - 2024"
       company:
         name: MEI
-        logo: "tabler:letterm"
+        logo: "tabler:letter-m"
         url: "https://www.linkedin.com/in/kodat/"
         color: "#5E6AD2"
     - position: "Ind. Maint. and Electronics"
