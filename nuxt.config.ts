@@ -74,6 +74,7 @@ export default defineNuxtConfig({
     strategy: 'prefix',
     defaultLocale: 'pt-br',
     langDir: 'locales',
+    baseUrl: 'https://koda-turqui.dev',
     locales: [
       {
         code: 'en',
