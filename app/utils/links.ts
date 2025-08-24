@@ -1,6 +1,5 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
-// Tipo mais específico para seus links de navegação
 interface NavLink extends NavigationMenuItem {
   label: string
   to: string

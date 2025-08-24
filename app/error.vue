@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
-import { useI18n } from '#imports'
+import { useI18n, useLocalePath } from '#imports'
+import { computed } from 'vue'
+import { navLinks } from '~/utils/links'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 defineProps({
   error: {
@@ -10,6 +13,7 @@ defineProps({
 })
 
 const { locale, t } = useI18n()
+const localePath = useLocalePath()
 
 useHead({
   htmlAttrs: {
@@ -22,28 +26,18 @@ useSeoMeta({
   description: t('error.pageNotFoundDescription')
 })
 
-const [{ data: navigation }, { data: files }] = await Promise.all([
-  useAsyncData('navigation', () => {
-    return Promise.all([
-      queryCollectionNavigation('blog')
-    ])
-  }, {
-    transform: data => data.flat()
-  }),
-  useLazyAsyncData('search', () => {
-    return Promise.all([
-      queryCollectionSearchSections('blog')
-    ])
-  }, {
-    server: false,
-    transform: data => data.flat()
-  })
-])
+const translatedLinks = computed<NavigationMenuItem[]>(() => {
+  return navLinks.map(link => ({
+    ...link,
+    label: t(link.label) ?? link.label,
+    to: localePath(link.to) ?? link.to
+  }))
+})
 </script>
 
 <template>
   <div>
-    <AppHeader :links="navLinks" />
+    <AppHeader :links="translatedLinks" />
 
     <UMain>
       <UContainer>
@@ -54,17 +48,5 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     </UMain>
 
     <AppFooter />
-
-    <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        shortcut="meta_k"
-        :navigation="navigation"
-        :links="navLinks"
-        :fuse="{ resultLimit: 42 }"
-      />
-    </ClientOnly>
-
-    <UToaster />
   </div>
 </template>
