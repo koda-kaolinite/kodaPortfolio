@@ -50,6 +50,7 @@ export default defineNuxtConfig({
       crawlLinks: true
     },
     routeRules: {
+      '/': { redirect: { to: '/pt-br', statusCode: 301 } },
       '/**': { headers: { 'Cache-Control': 'public, max-age=3600, s-maxage=3600, must-revalidate' } }
     }
   },
@@ -91,11 +92,6 @@ export default defineNuxtConfig({
         icon: 'i-flag-br-4x3'
       }
     ],
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root'
-    },
     vueI18n: './i18n.config.ts'
   }
 
