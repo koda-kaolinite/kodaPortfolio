@@ -91,6 +91,11 @@ export default defineNuxtConfig({
         icon: 'i-flag-br-4x3'
       }
     ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    },
     vueI18n: './i18n.config.ts'
   }
 
