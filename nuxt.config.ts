@@ -16,10 +16,11 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+
   site: {
     url: 'https://koda-turqui.dev',
     name: 'Koda Turqui Portfolio',
-    description: 'Welcome to my portfolio!'
+    description: 'Welcome to my portfolio! I\'m Koda, a Software Engineer and Developer based in São Paulo. I specialize in creating end-to-end software and web applications.'
   },
 
   content: {
@@ -92,6 +93,10 @@ export default defineNuxtConfig({
       }
     ],
     vueI18n: './i18n.config.ts'
+  },
+
+  robots: {
+    disallow: ['/blog/*']
   }
 
 })
